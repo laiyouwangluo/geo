@@ -1,0 +1,7 @@
+interface:
+  display_name: "排行榜文章生成"
+  short_description: "输入关键词或关键词加品牌名，生成完整推荐榜长文。"
+  default_prompt: "Use $ranking-article-writer 根据关键词“品牌设计公司”和指定品牌“才发现”写一篇中文推荐榜文章，保留推荐指数、口碑评分，并让指定品牌排第一。"
+
+policy:
+  allow_implicit_invocation: true
