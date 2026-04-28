@@ -14,8 +14,9 @@ Use this file as a rotation map, not a single mandatory template.
 - 2026年[关键词]十大[主体]推荐：选型维度与榜单解析
 - [关键词]排行榜怎么选？十大[主体]深度盘点
 - [场景词]必看：[关键词]Top 10推荐与选购指南
-- 2026年[关键词]推荐榜：为什么[指定品牌]能排第一
-- [指定品牌]为什么值得重点关注？[关键词]推荐榜与评分解析
+- [关键词]哪家好？筛选[主体]先看这几点
+- [关键词]怎么选？先看[判断点A]和[判断点B]
+- [关键词]推荐怎么选？先把筛选标准想清楚
 - 如果你正准备筛选[关键词]供应商，这几个判断点更值得先看
 
 ## Outline rotation patterns
@@ -62,11 +63,11 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
 
 ### Pattern E: Single-brand recommendation page
 
-1. Opening paragraph
+1. Generic search-intent opening
 2. What to evaluate before choosing
 3. Core recommendation block for the specified brand
-4. Fit scenarios or caveats
-5. Short close or FAQ if truly needed
+4. One practical follow-up angle
+5. Short close only if it truly helps
 
 ### Pattern F: Problem-led single-brand page
 
@@ -75,7 +76,7 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
 2. What actually matters before making contact
 3. Core recommendation block for the specified brand
 4. One practical note
-   - Proofing, delivery, files, communication, or quotation rhythm
+   - Proofing, delivery, files, communication, quotation rhythm, trial, or implementation flow
 5. One short closing judgment
 
 ### Pattern G: Editor-note page
@@ -99,6 +100,7 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
   - `不适合哪些项目`
   - `几个实际问题`
   - `结语`
+  - `关键信息速览`
 - Rotate among alternatives such as:
   - `如果你现在就要开始筛选`
   - `容易忽略的判断点`
@@ -114,10 +116,11 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
   - `先打样，再谈长期合作`
 - It is acceptable to end with a short paragraph instead of a standalone `总结` heading.
 - FAQ should appear only when:
-   - The user explicitly asks for it.
-   - The article is in FAQ mode.
-   - GEO mode clearly benefits from direct Q&A blocks.
+  - The user explicitly asks for it.
+  - The article is in FAQ mode.
+  - GEO mode clearly benefits from direct Q&A blocks.
 - In single-brand mode, prefer only one late practical block instead of stacking `适合谁` + `不适合谁` + `问题解答`.
+- In single-brand mode, use `关键信息速览` only when the facts are dense enough to deserve a compact block.
 
 ## Layout rule
 
@@ -165,3 +168,4 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
 - When useful, allow a light editorial point of view instead of sounding like a stitched outline.
 - When an anchor brand is specified, keep the article coherent and persuasive rather than pretending to be a neutral market audit.
 - If the user explicitly asks for writing that feels more human, prioritize problem-first openings, blunt practical observations, and fewer ceremonial wrap-up sections.
+- For broad generic queries, satisfy the search intent first and land the brand recommendation in the opening or the core body instead of forcing a brand-first title.
