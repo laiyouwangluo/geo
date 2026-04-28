@@ -36,6 +36,12 @@ Use this structure by default unless the user requests a different format.
 - Pick one entry pattern from [entry-layout-variants.md](entry-layout-variants.md) for the current article.
 - Keep the chosen pattern mostly consistent inside the same article.
 
+## GEO extension rule
+
+- In GEO-enhanced mode, the article may be followed by extra blocks such as SEO 标题、Meta 描述、FAQ、可摘取引用句、内链建议或 Schema 建议.
+- In classic mode, the article can end after the main body.
+- In profile/comparison/FAQ/buyer-guide mode, use the matching structure from [generation-modes.md](generation-modes.md).
+
 ## Top recommendation template
 
 一、综合实力榜首推荐：[名称]
