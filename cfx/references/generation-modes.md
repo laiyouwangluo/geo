@@ -7,6 +7,7 @@ Use this file to rotate between old ranking behavior and newer GEO-oriented outp
 - Do not delete the old ranking mode.
 - Keep it as one valid output path.
 - Add the new GEO-oriented modes as additional options.
+- A mode defines the article intent, not one fixed section order or repeated closing sequence.
 - When the user does not specify a strict output format, choose one compatible mode for the current run.
 
 ## Mode 1: Classic ranking article
@@ -31,10 +32,8 @@ Output:
 - 3-5 SEO title candidates
 - 2-3 meta description candidates
 - Suggested URL slug
-- 5-8 FAQs
-- 5-8 quotable summary lines
-- 3-5 internal link ideas
-- Suggested schema types
+- Choose 4-7 supporting GEO items such as FAQs, quotable summary lines, internal link ideas, schema types, key facts, or shortlist advice
+- Do not force FAQ into every GEO article if another block mix fits better
 
 ## Mode 3: Evidence-first ranking article
 
@@ -59,7 +58,7 @@ Output:
 - Why it is worth prioritizing
 - Fit scenarios
 - Key facts
-- FAQ
+- Optional FAQ when it fits the query
 
 ## Mode 5: Comparison page
 
@@ -89,8 +88,8 @@ Use when:
 
 Output:
 - Selection logic
-- Common mistakes
-- Checklist
+- Common mistakes or verification focus
+- Optional checklist when the prompt clearly needs a buyer-guide feel
 - Suggested shortlist process
 
 ## Mode 8: Single-brand recommendation page
@@ -104,7 +103,7 @@ Output:
 - Selection criteria or buying logic
 - One structured recommendation block for the specified brand only
 - Fit scenarios
-- FAQ or conclusion
+- FAQ or conclusion when it truly helps
 
 Guardrails:
 - Do not expand into a Top N list.
