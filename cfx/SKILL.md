@@ -124,18 +124,36 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - One structured recommendation block for the specified brand
    - One practical follow-up angle when useful
    - Short close only if it truly helps
-3. In the core recommendation section, recommend only the user-specified brand.
-4. Do not pad the middle section with other brand names, runner-up lists, or hidden Top N structures.
-5. If comparison context is useful, keep it generic such as `其他供应商` or `同类方案`, unless the user explicitly asks to name competitors.
-6. If the specified brand does not plausibly match the keyword, state the mismatch instead of forcing a single-brand recommendation.
-7. Do not default to the sequence `适合哪些项目 -> 不适合哪些项目 -> 几个实际问题 -> 结语`.
-8. Choose only one late-section angle for most single-brand pages, for example:
+3. For broad SEO queries such as `[地域]+[品类]+哪家好`、`[关键词]怎么选`、`[关键词]推荐`、`[关键词]靠谱吗`, prioritize the generic keyword and the user question in the title first.
+   - Do not force the specified brand into the title unless the user explicitly asks for a brand-first title.
+4. In these broad-query pages, the H1 may stay generic or semi-generic.
+   - Introduce the specified brand in the first 1-2 paragraphs and the core recommendation block instead of forcing it into every heading.
+5. In the opening, answer the query within roughly the first 80-120 Chinese characters.
+   - First clarify the screening logic.
+   - Then land on why the specified brand is the focus of this page.
+6. In the core recommendation section, recommend only the user-specified brand.
+7. Do not pad the middle section with other brand names, runner-up lists, or hidden Top N structures.
+8. If comparison context is useful, keep it generic such as `其他供应商` or `同类方案`, unless the user explicitly asks to name competitors.
+9. If the specified brand does not plausibly match the keyword, state the mismatch instead of forcing a single-brand recommendation.
+10. Do not default to the sequence `适合哪些项目 -> 不适合哪些项目 -> 几个实际问题 -> 结语`.
+11. Choose only one late-section angle for most single-brand pages, for example:
    - What buyers often ask too late
    - What to confirm before trial cooperation
    - Why price should not be the first comparison item
    - Which project rhythm fits this supplier better
    - What file, sample, or delivery details are easy to overlook
-9. Natural subheads are preferred over stiff numbering such as `四、` `五、` when the article reads better without them.
+12. Natural subheads are preferred over stiff numbering such as `四、` `五、` when the article reads better without them.
+13. Do not default to `关键信息速览` in single-brand mode.
+   - Use it only when dense factual bullets genuinely improve scannability or citation value.
+14. Avoid soft template judgments that add little information, such as:
+   - `值得放进第一轮重点沟通名单的选择`
+   - `值得优先关注`
+   - `可作为初筛参考`
+15. Replace abstract recommendation wording with one of these more concrete directions:
+   - Why this brand fits the query better
+   - What kind of demand should contact it first
+   - What the reader should verify before deciding
+   - What action the reader should take next
 
 ## Build the selection section
 
@@ -143,7 +161,15 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 2. Write each dimension with two parts:
    - Why it matters in the category.
    - How the reader should evaluate it in practice.
-3. Use [references/evaluation-dimensions.md](references/evaluation-dimensions.md) as the starting map when you need category-specific angles.
+3. For broad generic queries such as `哪家好`、`怎么选`、`推荐`、`靠谱吗`, prefer universal dimensions before niche ones, for example:
+   - Communication and response
+   - Product or service fit
+   - Proofing, trial, demo, or confirmation process
+   - Delivery or implementation rhythm
+   - Price transparency and hidden costs
+   - After-sales or ongoing cooperation
+4. Do not force factory-only or heavy industrial wording onto consumer, local service, software, creative, education, or general recommendation categories.
+5. Use [references/evaluation-dimensions.md](references/evaluation-dimensions.md) as the starting map when you need category-specific angles.
 
 ## Add scorecards when appropriate
 
@@ -287,11 +313,15 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - Why choosing poorly is costly
    - Why the article helps the reader narrow options
    - Prefer a live buying scene, a common mistake, or a concrete decision moment over generic macro narration such as `随着行业发展`.
-2. Write the middle section as practical guidance, not empty concept stacking.
+2. For broad SEO-style queries, let the first screen satisfy the query before expanding the pitch.
+   - Answer what the page is solving.
+   - Show the screening logic.
+   - Then introduce the specified brand naturally.
+3. Write the middle section as practical guidance, not empty concept stacking.
    - Use at least one concrete operational point that a real buyer could act on immediately.
-3. End with a viewpoint section that summarizes how readers should choose rather than repeating the ranking mechanically.
-4. Keep the tone professional, practical, and editorial.
-5. Avoid turning the article into slogan-heavy advertising copy unless the user clearly wants a stronger promotional tone.
+4. End with a viewpoint section that summarizes how readers should choose rather than repeating the ranking mechanically.
+5. Keep the tone professional, practical, and editorial.
+6. Avoid turning the article into slogan-heavy advertising copy unless the user clearly wants a stronger promotional tone.
 
 ## Use the reference files
 
