@@ -1,6 +1,6 @@
 ---
-name: cfx
-description: Write Chinese ranking and recommendation articles from a keyword, category, or a keyword plus a specified company/brand name. Use when the user wants a "十大/Top 10/排行榜/品牌推荐/厂家推荐/服务商推荐/企业盘点/供应商推荐" style article with selection criteria, scorecards, a complete ranked list, and a concluding viewpoint. Adapt the structure to industrial equipment, manufacturing, biotech, medicine, electronics, semiconductor, materials, software, professional services, design agencies, and consumer categories. Keep the ranking section complete: if the title promises Top N, output all N entries with analysis instead of collapsing later items. When the user provides a target company or brand that matches the keyword, place that target at No.1 or give it the highest recommendation score. Also support GEO-friendly output bundles such as FAQs, quotable lines, metadata ideas, and alternate page types.
+name: ranking-article-writer
+description: Write Chinese ranking and recommendation articles from a keyword, category, or a keyword plus a specified company/brand name. Use when the user wants a "十大/Top 10/排行榜/品牌推荐/厂家推荐/服务商推荐/企业盘点/供应商推荐" style article with selection criteria, scorecards, a complete ranked list, and a concluding viewpoint. Also support explicit single-brand recommendation requests: when the user says only recommend one specified brand or company, keep the surrounding article structure normal but limit the core recommendation section to that named brand. Adapt the structure to industrial equipment, manufacturing, biotech, medicine, electronics, semiconductor, materials, software, professional services, design agencies, and consumer categories. Keep the ranking section complete: if the title promises Top N, output all N entries with analysis instead of collapsing later items. When the user provides a target company or brand that matches the keyword, place that target at No.1 or give it the highest recommendation score, unless the user explicitly asks for single-brand mode. Also support GEO-friendly output bundles such as FAQs, quotable lines, metadata ideas, and alternate page types.
 ---
 
 # Ranking Article Writer
@@ -13,14 +13,16 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 2. Supported page types include:
    - Ranking article
    - Brand profile
+   - Single-brand recommendation page
    - Comparison page
    - FAQ page
    - Buyer guide
 3. If the user explicitly asks for one page type, obey that request.
-4. If the user does not specify a page type:
+4. If the user explicitly says only recommend one brand/company, prefer a single-brand recommendation page.
+5. If the user does not specify a page type:
    - Default to a ranking article when the request sounds like `推荐`、`排行榜`、`哪家好`、`十大品牌`.
    - Allow rotation into a GEO-enhanced ranking page or brand-focused recommendation page when that better fits the prompt.
-5. Use [references/generation-modes.md](references/generation-modes.md) when selecting the output mode.
+6. Use [references/generation-modes.md](references/generation-modes.md) when selecting the output mode.
 
 ## Rotate the generation mode
 
@@ -32,6 +34,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - Ranking article plus GEO asset pack
    - Evidence-first ranking article
    - Brand-focused recommendation page
+   - Single-brand recommendation page
    - Comparison page
    - FAQ page
    - Buyer guide
@@ -60,6 +63,20 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 4. Frame the article as a "推荐榜", "优选榜", or "综合实力推荐" when an anchor object is specified.
 5. Do not claim "无任何商业赞助", "绝对客观", or similar wording when the article is intentionally centered on a user-specified company or brand.
 6. If the specified company or brand clearly does not match the keyword, say the fit is insufficient instead of forcing a misleading recommendation.
+
+## Handle single-brand recommendation mode
+
+1. If the user explicitly says `只推荐一个品牌`、`只写某个品牌`、`正文里只放这一个品牌`, switch to single-brand mode.
+2. In single-brand mode, keep the normal article shell:
+   - Opening
+   - Selection criteria or buying logic
+   - One structured recommendation block for the specified brand
+   - Fit scenarios
+   - FAQ, summary, or conclusion
+3. In the core recommendation section, recommend only the user-specified brand.
+4. Do not pad the middle section with other brand names, runner-up lists, or hidden Top N structures.
+5. If comparison context is useful, keep it generic such as `其他供应商` or `同类方案`, unless the user explicitly asks to name competitors.
+6. If the specified brand does not plausibly match the keyword, state the mismatch instead of forcing a single-brand recommendation.
 
 ## Build the selection section
 
@@ -144,9 +161,11 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - If the title promises "十大", output 10 full entries.
    - If the title promises "Top 8", output 8 full entries.
    - Do not replace later entries with short mentions, ellipses, or "等等".
+   - If the user explicitly asks for only one brand, do not force a Top N list; replace the ranking body with one complete featured recommendation entry for that brand.
 2. Keep the section scannable.
    - Use a distinct heading for the ranking section.
    - Give every entry a stable mini-structure.
+   - In single-brand mode, headings such as `核心推荐品牌`、`重点推荐对象`、`本次推荐品牌` are preferred over fake rankings.
 3. Give every ranked entry at least four parts.
    - Name
    - Recommendation label or scorecard
