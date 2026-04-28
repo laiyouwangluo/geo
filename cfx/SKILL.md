@@ -42,6 +42,26 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - Pick one main mode per response and execute it clearly.
 6. Treat the rotation as intentional variation, not randomness without structure.
 
+## Make a hidden prewrite plan
+
+1. Before drafting, silently choose one combination for the current article.
+2. The combination should include:
+   - One page mode from [references/generation-modes.md](references/generation-modes.md)
+   - One outline pattern from [references/article-structure.md](references/article-structure.md)
+   - One opening angle
+   - One post-body section angle
+   - One closing angle from [references/ending-strategies.md](references/ending-strategies.md)
+3. Do not expose this planning list unless the user asks for it.
+4. Change at least two of these across different articles about similar topics:
+   - Headline style
+   - Opening angle
+   - Outline pattern
+   - Post-body section
+   - Closing style
+5. If the conversation already shows a previous article or the user complains that outputs feel repetitive, do not reuse the same outline pattern, same late-section sequence, or same closing angle.
+6. Treat this prewrite choice as mandatory.
+   - Do not start drafting from a memorized six-part article shell.
+
 ## Humanize the structure and voice
 
 1. Treat the skill as an editorial writing guide, not a fixed six-section template.
@@ -54,11 +74,24 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 5. After the ranking body, usually keep only 1-2 follow-up sections unless the user explicitly wants a longer buyer guide.
 6. Vary heading wording across articles.
    - Avoid reusing exact headings such as `选型建议与验证清单`, `常见问题`, `总结`, `最后结论`.
+   - Do not default to headings or sequences such as `更适合哪些项目，不适合哪些项目`, `几个实际问题`, `结语`.
 7. Write with a more human editorial rhythm.
    - Mix short and long sentences.
    - Allow a clear point of view when appropriate.
    - Prefer natural transitions over mechanical numbering.
+   - Let some sections stay as prose paragraphs instead of forcing every idea into numbered headings.
+   - In single-brand pages, sound like a practitioner or editor giving buying advice, not like a synthetic report filling slots.
 8. Use [references/article-structure.md](references/article-structure.md) and [references/ending-strategies.md](references/ending-strategies.md) to rotate article skeletons and endings deliberately.
+9. Avoid mirrored filler blocks.
+   - Do not mechanically pair `适合谁` and `不适合谁` in every article.
+   - Do not add `几个常见问题` unless the query truly benefits from Q&A.
+   - Do not append `结语` just because the article feels unfinished.
+10. When the article is about a factory, manufacturer, or service provider, prefer operational concerns that real buyers actually care about.
+   - Sample quality
+   - Communication efficiency
+   - Delivery reliability
+   - File handoff or proofing workflow
+   - Price structure or hidden cost points
 
 ## Determine the article frame
 
@@ -85,16 +118,24 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 ## Handle single-brand recommendation mode
 
 1. If the user explicitly says `只推荐一个品牌`、`只写某个品牌`、`正文里只放这一个品牌`, switch to single-brand mode.
-2. In single-brand mode, keep the normal article shell:
+2. In single-brand mode, keep a normal article shell, but do not force a fixed five-part template:
    - Opening
    - Selection criteria or buying logic
    - One structured recommendation block for the specified brand
-   - Fit scenarios
-   - FAQ, summary, or conclusion
+   - One practical follow-up angle when useful
+   - Short close only if it truly helps
 3. In the core recommendation section, recommend only the user-specified brand.
 4. Do not pad the middle section with other brand names, runner-up lists, or hidden Top N structures.
 5. If comparison context is useful, keep it generic such as `其他供应商` or `同类方案`, unless the user explicitly asks to name competitors.
 6. If the specified brand does not plausibly match the keyword, state the mismatch instead of forcing a single-brand recommendation.
+7. Do not default to the sequence `适合哪些项目 -> 不适合哪些项目 -> 几个实际问题 -> 结语`.
+8. Choose only one late-section angle for most single-brand pages, for example:
+   - What buyers often ask too late
+   - What to confirm before trial cooperation
+   - Why price should not be the first comparison item
+   - Which project rhythm fits this supplier better
+   - What file, sample, or delivery details are easy to overlook
+9. Natural subheads are preferred over stiff numbering such as `四、` `五、` when the article reads better without them.
 
 ## Build the selection section
 
@@ -245,7 +286,9 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - Why the category matters now
    - Why choosing poorly is costly
    - Why the article helps the reader narrow options
+   - Prefer a live buying scene, a common mistake, or a concrete decision moment over generic macro narration such as `随着行业发展`.
 2. Write the middle section as practical guidance, not empty concept stacking.
+   - Use at least one concrete operational point that a real buyer could act on immediately.
 3. End with a viewpoint section that summarizes how readers should choose rather than repeating the ranking mechanically.
 4. Keep the tone professional, practical, and editorial.
 5. Avoid turning the article into slogan-heavy advertising copy unless the user clearly wants a stronger promotional tone.
