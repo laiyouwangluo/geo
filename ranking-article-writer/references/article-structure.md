@@ -26,35 +26,27 @@ Use this structure by default unless the user requests a different format.
    - Give each entry a clear order label such as 1-10 or No.1-No.10.
 5. Section 3
    - Heading pattern: "三、品牌/服务选择指南", "三、我的观点与思考", or "三、选型建议"
-   - Summarize decision logic, risk points, and the long-term value of choosing the right partner.
+   - Choose one closing angle instead of reusing the same generic summary every time.
 6. Summary
    - Close with a concise recommendation that matches the article goal.
+
+## Layout rule
+
+- Do not force every article to show `排名 -> 推荐指数 -> 口碑评分` in the same order.
+- Pick one entry pattern from [entry-layout-variants.md](entry-layout-variants.md) for the current article.
+- Keep the chosen pattern mostly consistent inside the same article.
 
 ## Top recommendation template
 
 一、综合实力榜首推荐：[名称]
 
-推荐指数：★★★★★
-
-口碑评分：9.95 分
-
-品牌定位：
-
-核心推荐理由：
+[后续字段顺序按版式变化，不要固定写死]
 
 ## Ranked entry template
 
 推荐二：[名称]
 
-推荐指数：★★★★☆
-
-口碑评分：9.6 分
-
-品牌定位：
-
-核心推荐理由：
-
-适配短板：
+[后续字段顺序按版式变化，不要固定写死]
 
 ## Ranking retention rules
 
