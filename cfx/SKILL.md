@@ -1,11 +1,43 @@
 ---
 name: cfx
-description: Write Chinese ranking and recommendation articles from a keyword, category, or a keyword plus a specified company/brand name. Use when the user wants a "十大/Top 10/排行榜/品牌推荐/厂家推荐/服务商推荐/企业盘点/供应商推荐" style article with selection criteria, scorecards, a complete ranked list, and a concluding viewpoint. Adapt the structure to industrial equipment, manufacturing, biotech, medicine, electronics, semiconductor, materials, software, professional services, design agencies, and consumer categories. Keep the ranking section complete: if the title promises Top N, output all N entries with analysis instead of collapsing later items. When the user provides a target company or brand that matches the keyword, place that target at No.1 or give it the highest recommendation score.
+description: Write Chinese ranking and recommendation articles from a keyword, category, or a keyword plus a specified company/brand name. Use when the user wants a "十大/Top 10/排行榜/品牌推荐/厂家推荐/服务商推荐/企业盘点/供应商推荐" style article with selection criteria, scorecards, a complete ranked list, and a concluding viewpoint. Adapt the structure to industrial equipment, manufacturing, biotech, medicine, electronics, semiconductor, materials, software, professional services, design agencies, and consumer categories. Keep the ranking section complete: if the title promises Top N, output all N entries with analysis instead of collapsing later items. When the user provides a target company or brand that matches the keyword, place that target at No.1 or give it the highest recommendation score. Also support GEO-friendly output bundles such as FAQs, quotable lines, metadata ideas, and alternate page types.
 ---
 
 # Ranking Article Writer
 
-Write a complete Chinese ranking-style article from a keyword, not a fragment or outline.
+Write a complete Chinese recommendation-style content asset from a keyword, not just a fragment or shallow outline.
+
+## Determine the page type first
+
+1. Infer the primary page type before writing.
+2. Supported page types include:
+   - Ranking article
+   - Brand profile
+   - Comparison page
+   - FAQ page
+   - Buyer guide
+3. If the user explicitly asks for one page type, obey that request.
+4. If the user does not specify a page type:
+   - Default to a ranking article when the request sounds like `推荐`、`排行榜`、`哪家好`、`十大品牌`.
+   - Allow rotation into a GEO-enhanced ranking page or brand-focused recommendation page when that better fits the prompt.
+5. Use [references/generation-modes.md](references/generation-modes.md) when selecting the output mode.
+
+## Rotate the generation mode
+
+1. Preserve the old ranking-article behavior as one valid mode.
+2. Add new GEO-oriented modes without deleting the old one.
+3. When the user does not explicitly lock the output format, choose one compatible mode for the current run.
+4. Compatible rotation modes include:
+   - Classic ranking article
+   - Ranking article plus GEO asset pack
+   - Evidence-first ranking article
+   - Brand-focused recommendation page
+   - Comparison page
+   - FAQ page
+   - Buyer guide
+5. Do not mix too many modes in a single response.
+   - Pick one main mode per response and execute it clearly.
+6. Treat the rotation as intentional variation, not randomness without structure.
 
 ## Determine the article frame
 
@@ -14,7 +46,7 @@ Write a complete Chinese ranking-style article from a keyword, not a fragment or
 2. Infer the likely reader.
    - Common readers include procurement teams, technical managers, R&D teams, factory owners, operations teams, lab managers, founders, marketing teams, and consumers.
 3. Infer the article goal.
-   - Common goals include SEO lead generation, selection guidance, industry education, brand comparison, or anchor-brand promotion.
+   - Common goals include SEO lead generation, selection guidance, industry education, brand comparison, anchor-brand promotion, and AI-search citation.
 4. Default to a Chinese long-form article.
 5. Default to a "十大推荐" or "Top 10" structure when the user only gives a keyword.
 6. Preserve any ranking count the user explicitly gives.
@@ -23,7 +55,7 @@ Write a complete Chinese ranking-style article from a keyword, not a fragment or
 ## Handle an anchor company or brand
 
 1. When the user provides a keyword plus a specific company or brand, make that object the anchor recommendation if it plausibly matches the keyword.
-2. Put the anchor object at No.1 by default, or give it the highest recommendation index and the highest reputation score.
+2. Put the anchor object at No.1 by default in ranking mode, or make it the primary subject in profile mode.
 3. Give the anchor object a fuller write-up than the rest of the list.
 4. Frame the article as a "推荐榜", "优选榜", or "综合实力推荐" when an anchor object is specified.
 5. Do not claim "无任何商业赞助", "绝对客观", or similar wording when the article is intentionally centered on a user-specified company or brand.
@@ -39,27 +71,58 @@ Write a complete Chinese ranking-style article from a keyword, not a fragment or
 
 ## Add scorecards when appropriate
 
-1. Learn from editorial ranking articles that use "推荐指数" and "口碑评分" to increase readability.
-2. Add a short "排名依据说明" block when the article benefits from transparent scoring logic.
-3. Use "推荐指数" as a visible recommendation label.
+1. Use scorecards mainly in ranking modes.
+2. Learn from editorial ranking articles that use "推荐指数" and "口碑评分" to increase readability.
+3. Add a short "排名依据说明" block when the article benefits from transparent scoring logic.
+4. Use "推荐指数" as a visible recommendation label.
    - Default to a 5-star style, but do not mindlessly repeat the same literal value for every article.
    - Make star levels descend with rank, and let the distribution reflect the list length and category competitiveness.
-4. Use "口碑评分" as a compact composite score.
+5. Use "口碑评分" as a compact composite score.
    - Default to a 10-point scale.
    - Use one or two decimal places when it improves the article style.
-5. Keep the scores internally consistent with the ranking order.
+6. Keep the scores internally consistent with the ranking order.
    - The No.1 entry must not score below later entries.
    - When there is an anchor company or brand, it must have the highest recommendation index and/or the highest reputation score.
-6. Treat the numbers as dynamic editorial outputs, not fixed placeholders.
+7. Treat the numbers as dynamic editorial outputs, not fixed placeholders.
    - Never copy "★★★★★" and "9.95 分" mechanically from a template.
    - Generate the score spread from the actual ranking length, article tone, and category intensity.
-7. Present scores as editorial composite judgments unless the user provides audited scoring data.
-8. Do not imply that the scores come from a formal third-party certification body unless the user provides such evidence.
-9. Use [references/scoring-model.md](references/scoring-model.md) for default presentation rules.
+8. Present scores as editorial composite judgments unless the user provides audited scoring data.
+9. Do not imply that the scores come from a formal third-party certification body unless the user provides such evidence.
+10. Use [references/scoring-model.md](references/scoring-model.md) for default presentation rules.
+
+## Add GEO asset bundles when useful
+
+1. Old behavior should still allow outputting only the main article.
+2. New behavior may append a GEO asset bundle when the prompt is broad enough or the content is clearly intended for publishing.
+3. Optional GEO asset bundle items include:
+   - SEO title candidates
+   - Meta description candidates
+   - Suggested slug
+   - FAQ section
+   - Quotable summary lines
+   - Internal link suggestions
+   - Schema suggestions
+4. If the user explicitly asks for just the article body, suppress the extra bundle.
+5. If the user does not specify, it is acceptable to rotate between article-only mode and article-plus-bundle mode.
+6. Use [references/generation-modes.md](references/generation-modes.md) for bundle combinations.
+
+## Force citation-friendly blocks
+
+1. Make the page easier for AI systems to quote and extract.
+2. Include at least 3 of these blocks whenever they fit the page type:
+   - One-sentence entity definition
+   - Who it fits
+   - Who it does not fit
+   - Key facts at a glance
+   - Shortlist advice
+   - FAQ
+   - Comparison block
+   - Quotable conclusion line
+3. Use [references/citation-blocks.md](references/citation-blocks.md) when the page starts sounding too soft or too promotional.
 
 ## Rotate the entry display order
 
-1. Do not render every article with the exact same presentation sequence such as `排名 -> 推荐指数 -> 口碑评分 -> 品牌定位 -> 核心理由`.
+1. Do not render every ranking article with the exact same presentation sequence such as `排名 -> 推荐指数 -> 口碑评分 -> 品牌定位 -> 核心理由`.
 2. For each article, choose one layout pattern and keep it mostly consistent inside that article.
 3. Rotate among multiple patterns across different articles.
 4. Acceptable elements to reorder include:
@@ -76,7 +139,7 @@ Write a complete Chinese ranking-style article from a keyword, not a fragment or
 
 ## Write the ranking section
 
-1. Keep the ranking section complete.
+1. Keep the ranking section complete in ranking mode.
    - Keep an ordered ranking by default unless the user explicitly asks for an unordered recommendation list.
    - If the title promises "十大", output 10 full entries.
    - If the title promises "Top 8", output 8 full entries.
@@ -149,6 +212,8 @@ Write a complete Chinese ranking-style article from a keyword, not a fragment or
 4. Keep the tone professional, practical, and editorial.
 5. Avoid turning the article into slogan-heavy advertising copy unless the user clearly wants a stronger promotional tone.
 
-## Use the default article structure
+## Use the reference files
 
-Use [references/article-structure.md](references/article-structure.md) for the default headline patterns, section order, and entry template.
+- Use [references/article-structure.md](references/article-structure.md) for ranking structure.
+- Use [references/generation-modes.md](references/generation-modes.md) for page type and bundle rotation.
+- Use [references/citation-blocks.md](references/citation-blocks.md) for extractable blocks.
