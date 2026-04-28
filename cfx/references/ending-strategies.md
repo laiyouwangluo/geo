@@ -54,3 +54,15 @@ Make the ending feel tailored to the keyword, the ranking logic, and the reader'
 - "与其追求大而全，不如先确认谁最适合你的当前阶段。"
 - "下一步最值得做的，不是立刻拍板，而是用一个小范围验证把候选名单缩到两家。"
 - "放到未来两三年的竞争里看，真正拉开差距的，仍然是[关键能力]。"
+
+## Short-close options
+
+- End with one direct judgment sentence instead of a `总结` heading.
+- End with one buyer action sentence instead of a long ceremony.
+- End with one caution about price, proofing, delivery, or communication if that better fits the topic.
+
+## What to avoid in repetitive endings
+
+- Do not force `结语` as a heading.
+- Do not restate the whole article in slightly different words.
+- Do not always convert the ending into FAQ or `几个问题`.
