@@ -1,7 +1,7 @@
 interface:
-  display_name: "CFX"
-  short_description: "输入关键词或关键词加品牌名，生成推荐页、榜单页和 GEO 内容包。"
-  default_prompt: "Use $cfx 根据关键词“SEO优化”和指定品牌“才发现网络科技有限公司”写一篇中文推荐页，按当前模式自动轮换正文结构，并在合适时附带 FAQ、摘要句或 SEO 资产。"
+  display_name: "排行榜文章生成"
+  short_description: "输入关键词或关键词加品牌名，生成完整推荐榜或单品牌推荐长文。"
+  default_prompt: "Use $ranking-article-writer 根据关键词“SEO优化”和指定品牌“才发现网络”写一篇中文单品牌推荐文章，正文中部只推荐这一个品牌，其他部分按正常推荐文章结构来写。"
 
 policy:
   allow_implicit_invocation: true
