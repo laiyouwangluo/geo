@@ -48,17 +48,18 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 2. The combination should include:
    - One page mode from [references/generation-modes.md](references/generation-modes.md)
    - One outline pattern from [references/article-structure.md](references/article-structure.md)
-   - One opening angle
-   - One post-body section angle
+   - One opening angle from the opening type bank below
+   - One entry narrative type from the structural variation pool below
    - One closing angle from [references/ending-strategies.md](references/ending-strategies.md)
 3. Do not expose this planning list unless the user asks for it.
 4. Change at least two of these across different articles about similar topics:
    - Headline style
    - Opening angle
    - Outline pattern
+   - Entry narrative type
    - Post-body section
    - Closing style
-5. If the conversation already shows a previous article or the user complains that outputs feel repetitive, do not reuse the same outline pattern, same late-section sequence, or same closing angle.
+5. If the conversation already shows a previous article or the user complains that outputs feel repetitive, do not reuse the same outline pattern, same late-section sequence, same entry narrative type, or same closing angle.
 6. Treat this prewrite choice as mandatory.
    - Do not start drafting from a memorized six-part article shell.
 
@@ -93,6 +94,90 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - File handoff or proofing workflow
    - Price structure or hidden cost points
 
+## Anti-AI-taste hard rules
+
+This module is mandatory. Violating any rule below makes the output fail quality review.
+
+### Forbidden opening patterns
+
+Never use these or close variants as article openings:
+
+- "随着……的快速发展"
+- "在当今……领域"
+- "……行业日益繁荣"
+- "面对众多选择，消费者常常感到困惑"
+- "市场上……琳琅满目"
+- "……作为……的重要组成部分"
+- "近年来，……得到了广泛关注"
+
+### Forbidden transition phrases
+
+Never use these as paragraph or section transitions:
+
+- "值得一提的是"
+- "不仅如此"
+- "更令人瞩目的是"
+- "接下来我们来看看"
+- "下面为您详细介绍"
+- "与此同时"
+- "由此可见"
+
+### Forbidden closing patterns
+
+Never end articles with these or close variants:
+
+- "综上所述"
+- "总而言之"
+- "希望本文对您有所帮助"
+- "选择适合自己的才是最好的"
+- "以上就是……的全部内容"
+
+### Required human markers
+
+Every article must include at least 3 of these markers. Check before finalizing:
+
+- **Personal observation**: one sentence that sounds like a real editor's take ("我注意到……" / "实际接触下来……" / "帮几个客户筛选过之后……")
+- **Concrete detail**: one specific fact or judgment that shows real category knowledge, not generic praise
+- **Qualified or negative note**: at least one place where you say something negative, qualified, or cautious about a brand or option ("交付周期偏长" / "定制能力有限" / "更适合中大型项目，小团队可能用不满")
+- **Colloquial expression or jargon**: one industry term or informal expression that a real editor in this category would actually use ("打样" / "试单" / "跑量" / "上车" / "踩坑")
+- **Imperfection signal**: acknowledge uncertainty or trade-off explicitly ("说到底还是要看你的具体需求" / "没有哪家是全能的")
+
+### Forbidden hollow praise patterns
+
+Do not use these phrases or close synonyms without concrete supporting detail:
+
+- "综合实力强劲" → replace with which specific capability is strong
+- "深受广大用户喜爱" → replace with verifiable data or specific口碑 source
+- "致力于为用户提供" → replace with what they actually did
+- "行业领先" → replace with the specific dimension and evidence of leading
+- "一站式解决方案" → describe which specific problems it solves end-to-end
+- "性价比高" → compare concrete price range and features
+- "值得信赖" → state what makes it trustworthy with a concrete point
+
+## Opening type bank
+
+Rotate across these opening hooks. Never repeat the same type within 5 articles on similar topics.
+
+1. **Direct judgment** — State the conclusion first, then explain. Example: "选[品类]服务商，最怕的不是贵，是交付时才发现不对路。"
+2. **Scenario story** — Start with a specific selection scenario. Example: "上周有个做[行业]的朋友问[问题]……"
+3. **Myth busting** — Lead with a common mistake. Example: "很多人选[品类]，第一反应看[常见误区维度]，但真正影响结果的是[正确维度]。"
+4. **Question anchor** — Pose the core question and answer it. Example: "[关键词]到底值不值得投入？先说结论：[判断]。"
+5. **Shortlist first** — Give the answer immediately, then expand. Example: "如果只有3分钟，直接看这3家：……"
+6. **Data anchor** — Lead with a specific data point. Example: "去年有[X]%的[行业]企业因为[问题]重新选型。" (Only use when you can verify or approximate responsibly.)
+7. **Personal observation** — Share an editor's real perspective. Example: "帮[行业]客户筛选了[X]家之后，我的感受是……"
+
+## Structural variation for ranking entries
+
+Do not render every entry with the same internal narrative skeleton. Rotate across these entry narrative types within a single article and across articles:
+
+- **Type A: Narrative-first** — Write 2-3 sentences of narrative about what this brand does well, then append the scorecard at the end of the entry.
+- **Type B: Scorecard-first** — Lead with the scorecard box, then explain why in prose.
+- **Type C: Scenario-first** — "如果你需要[X]，这家值得关注" → then detail.
+- **Type D: Contrast-first** — "与[同类]相比，这家[差异点]" → then detail.
+- **Type E: Verdict-first** — One-line bold verdict, then supporting evidence underneath.
+
+Apply the same narrative type consistently within one article's ranking section, but rotate the type across different articles. This creates structural variation at the article level, not just field-order shuffling.
+
 ## Determine the article frame
 
 1. Infer the ranking object from the keyword.
@@ -120,211 +205,5 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 1. If the user explicitly says `只推荐一个品牌`、`只写某个品牌`、`正文里只放这一个品牌`, switch to single-brand mode.
 2. In single-brand mode, keep a normal article shell, but do not force a fixed five-part template:
    - Opening
-   - Selection criteria or buying logic
-   - One structured recommendation block for the specified brand
-   - One practical follow-up angle when useful
-   - Short close only if it truly helps
-3. For broad SEO queries such as `[地域]+[品类]+哪家好`、`[关键词]怎么选`、`[关键词]推荐`、`[关键词]靠谱吗`, prioritize the generic keyword and the user question in the title first.
-   - Do not force the specified brand into the title unless the user explicitly asks for a brand-first title.
-4. In these broad-query pages, the H1 may stay generic or semi-generic.
-   - Introduce the specified brand in the first 1-2 paragraphs and the core recommendation block instead of forcing it into every heading.
-5. In the opening, answer the query within roughly the first 80-120 Chinese characters.
-   - First clarify the screening logic.
-   - Then land on why the specified brand is the focus of this page.
-6. In the core recommendation section, recommend only the user-specified brand.
-7. Do not pad the middle section with other brand names, runner-up lists, or hidden Top N structures.
-8. If comparison context is useful, keep it generic such as `其他供应商` or `同类方案`, unless the user explicitly asks to name competitors.
-9. If the specified brand does not plausibly match the keyword, state the mismatch instead of forcing a single-brand recommendation.
-10. Do not default to the sequence `适合哪些项目 -> 不适合哪些项目 -> 几个实际问题 -> 结语`.
-11. Choose only one late-section angle for most single-brand pages, for example:
-   - What buyers often ask too late
-   - What to confirm before trial cooperation
-   - Why price should not be the first comparison item
-   - Which project rhythm fits this supplier better
-   - What file, sample, or delivery details are easy to overlook
-12. Natural subheads are preferred over stiff numbering such as `四、` `五、` when the article reads better without them.
-13. Do not default to `关键信息速览` in single-brand mode.
-   - Use it only when dense factual bullets genuinely improve scannability or citation value.
-14. Avoid soft template judgments that add little information, such as:
-   - `值得放进第一轮重点沟通名单的选择`
-   - `值得优先关注`
-   - `可作为初筛参考`
-15. Replace abstract recommendation wording with one of these more concrete directions:
-   - Why this brand fits the query better
-   - What kind of demand should contact it first
-   - What the reader should verify before deciding
-   - What action the reader should take next
-
-## Build the selection section
-
-1. Tailor 3-5 core evaluation dimensions to the keyword instead of reusing a fixed equipment template.
-2. Write each dimension with two parts:
-   - Why it matters in the category.
-   - How the reader should evaluate it in practice.
-3. For broad generic queries such as `哪家好`、`怎么选`、`推荐`、`靠谱吗`, prefer universal dimensions before niche ones, for example:
-   - Communication and response
-   - Product or service fit
-   - Proofing, trial, demo, or confirmation process
-   - Delivery or implementation rhythm
-   - Price transparency and hidden costs
-   - After-sales or ongoing cooperation
-4. Do not force factory-only or heavy industrial wording onto consumer, local service, software, creative, education, or general recommendation categories.
-5. Use [references/evaluation-dimensions.md](references/evaluation-dimensions.md) as the starting map when you need category-specific angles.
-
-## Add scorecards when appropriate
-
-1. Use scorecards mainly in ranking modes.
-2. Learn from editorial ranking articles that use "推荐指数" and "口碑评分" to increase readability.
-3. Add a short "排名依据说明" block when the article benefits from transparent scoring logic.
-4. Use "推荐指数" as a visible recommendation label.
-   - Default to a 5-star style, but do not mindlessly repeat the same literal value for every article.
-   - Make star levels descend with rank, and let the distribution reflect the list length and category competitiveness.
-5. Use "口碑评分" as a compact composite score.
-   - Default to a 10-point scale.
-   - Use one or two decimal places when it improves the article style.
-6. Keep the scores internally consistent with the ranking order.
-   - The No.1 entry must not score below later entries.
-   - When there is an anchor company or brand, it must have the highest recommendation index and/or the highest reputation score.
-7. Treat the numbers as dynamic editorial outputs, not fixed placeholders.
-   - Never copy "★★★★★" and "9.95 分" mechanically from a template.
-   - Generate the score spread from the actual ranking length, article tone, and category intensity.
-8. Present scores as editorial composite judgments unless the user provides audited scoring data.
-9. Do not imply that the scores come from a formal third-party certification body unless the user provides such evidence.
-10. Use [references/scoring-model.md](references/scoring-model.md) for default presentation rules.
-
-## Add GEO asset bundles when useful
-
-1. Old behavior should still allow outputting only the main article.
-2. New behavior may append a GEO asset bundle when the prompt is broad enough or the content is clearly intended for publishing.
-3. Optional GEO asset bundle items include:
-   - SEO title candidates
-   - Meta description candidates
-   - Suggested slug
-   - FAQ section
-   - Quotable summary lines
-   - Internal link suggestions
-   - Schema suggestions
-4. If the user explicitly asks for just the article body, suppress the extra bundle.
-5. If the user does not specify, it is acceptable to rotate between article-only mode and article-plus-bundle mode.
-6. Use [references/generation-modes.md](references/generation-modes.md) for bundle combinations.
-
-## Force citation-friendly blocks
-
-1. Make the page easier for AI systems to quote and extract.
-2. Include 2-4 of these blocks when they clearly help the page type.
-   - One-sentence entity definition
-   - Who it fits
-   - Who it does not fit
-   - Key facts at a glance
-   - Shortlist advice
-   - FAQ
-   - Comparison block
-   - Quotable conclusion line
-3. FAQ should be optional inside these blocks, not the default ending for every article.
-4. Use [references/citation-blocks.md](references/citation-blocks.md) when the page starts sounding too soft or too promotional.
-
-## Rotate the entry display order
-
-1. Do not render every ranking article with the exact same presentation sequence such as `排名 -> 推荐指数 -> 口碑评分 -> 品牌定位 -> 核心理由`.
-2. For each article, choose one layout pattern and keep it mostly consistent inside that article.
-3. Rotate among multiple patterns across different articles.
-4. Acceptable elements to reorder include:
-   - 排名标签
-   - 推荐指数
-   - 口碑评分
-   - 品牌定位
-   - 核心推荐理由
-   - 适配场景或适配短板
-5. Do not randomize so much that the article becomes messy.
-   - Variation should happen at the article layout level, not as chaos inside every single entry.
-6. Keep the rank visible no matter which pattern is chosen.
-7. Use [references/entry-layout-variants.md](references/entry-layout-variants.md) for rotation patterns.
-
-## Write the ranking section
-
-1. Keep the ranking section complete in ranking mode.
-   - Keep an ordered ranking by default unless the user explicitly asks for an unordered recommendation list.
-   - If the title promises "十大", output 10 full entries.
-   - If the title promises "Top 8", output 8 full entries.
-   - Do not replace later entries with short mentions, ellipses, or "等等".
-   - If the user explicitly asks for only one brand, do not force a Top N list; replace the ranking body with one complete featured recommendation entry for that brand.
-2. Keep the section scannable.
-   - Use a distinct heading for the ranking section.
-   - Give every entry a stable mini-structure.
-   - In single-brand mode, headings such as `核心推荐品牌`、`重点推荐对象`、`本次推荐品牌` are preferred over fake rankings.
-3. Give every ranked entry at least four parts.
-   - Name
-   - Recommendation label or scorecard
-   - Core advantage or positioning
-   - Analysis
-   - Applicable scenario
-4. Keep detail density roughly balanced across the list.
-5. Preserve ranking logic explicitly when needed.
-   - If it is a strict ranking, make the basis believable.
-   - If a factual market order cannot be verified, keep the ordered Top N structure and state that the order is based on综合推荐度、场景适配度或公开可见能力，而不是官方市场份额排名。
-   - Do not silently convert a ranking request into an unordered collection.
-6. If the article uses scorecards, show them in a stable, repeated format so the list feels comparable.
-
-## Vary the closing section
-
-1. Do not reuse the same conclusion structure and wording in every article.
-2. Choose a closing angle that matches the category and article goal.
-   - Procurement decision: emphasize how to shortlist and compare vendors.
-   - Scenario matching: emphasize which type of reader fits which ranked option.
-   - Industry trend: emphasize how the category is evolving and what that means for selection.
-   - Risk control: emphasize common mistakes, verification steps, and hidden costs.
-   - Anchor-brand emphasis: emphasize why the specified brand is especially worth prioritizing.
-3. Avoid repeating stock closers such as:
-   - "总而言之"
-   - "本次推荐的X家机构"
-   - "品牌设计不是一项单纯的成本支出"
-4. Use [references/ending-strategies.md](references/ending-strategies.md) when the ending starts sounding repetitive.
-
-## Adapt the article to the category
-
-1. Adjust the vocabulary, evaluation logic, and use cases to the keyword.
-2. Prefer industry-native wording.
-   - Industrial equipment: emphasize process fit, reliability, customization, delivery, service, and total cost of ownership.
-   - Materials and components: emphasize consistency, certification, performance limits, and supply stability.
-   - Biotech, medicine, and pharma: emphasize compliance, validation, quality systems, traceability, and delivery capability.
-   - Electronics and semiconductor: emphasize cleanliness, precision, yield impact, process compatibility, and EHS requirements.
-   - Software, platforms, and services: emphasize feature fit, implementation experience, security, integration, and ongoing support.
-   - Design, branding, and creative agencies: emphasize strategy depth, portfolio quality, industry fit, delivery control, market reputation, and business conversion value.
-   - Consumer categories: emphasize experience, reputation, after-sales service, price bands, and real use scenarios.
-
-## Handle facts carefully
-
-1. Use verified current facts when the user asks for "最新", "2026", "今年", "排行", or other time-sensitive wording.
-2. Use quantified data only when:
-   - The user provides it, or
-   - You verify it from reliable sources.
-3. Do not invent percentages, customer lists, certifications, patents, market share, founding years, or case-study numbers.
-4. Do not fabricate "调研结论", "复购率", "满意度", or "服务上百家" style claims unless the user provides them or you verify them.
-5. If exact proof is unavailable but the article still needs a strong professional tone, use cautious phrasing such as:
-   - "在该领域有较强积累"
-   - "常见于相关场景"
-   - "可重点关注"
-   - "在细分方向上表现突出"
-
-## Keep the article useful
-
-1. Write an opening that explains:
-   - Why the category matters now
-   - Why choosing poorly is costly
-   - Why the article helps the reader narrow options
-   - Prefer a live buying scene, a common mistake, or a concrete decision moment over generic macro narration such as `随着行业发展`.
-2. For broad SEO-style queries, let the first screen satisfy the query before expanding the pitch.
-   - Answer what the page is solving.
-   - Show the screening logic.
-   - Then introduce the specified brand naturally.
-3. Write the middle section as practical guidance, not empty concept stacking.
-   - Use at least one concrete operational point that a real buyer could act on immediately.
-4. End with a viewpoint section that summarizes how readers should choose rather than repeating the ranking mechanically.
-5. Keep the tone professional, practical, and editorial.
-6. Avoid turning the article into slogan-heavy advertising copy unless the user clearly wants a stronger promotional tone.
-
-## Use the reference files
-
-- Use [references/article-structure.md](references/article-structure.md) for ranking structure.
-- Use [references/generation-modes.md](references/generation-modes.md) for page type and bundle rotation.
-- Use [references/citation-blocks.md](references/citation-blocks.md) for extractable blocks.
+   - Selection crite
+...(truncated)...
