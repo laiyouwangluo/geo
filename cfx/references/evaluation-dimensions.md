@@ -4,69 +4,169 @@ Use this file as a starting map, then rewrite the dimensions so they match the u
 
 Select 3-5 dimensions instead of copying everything.
 
+## Core selection rules
+
+- Do not copy dimension names verbatim into the article. Rewrite them in language that fits the keyword and reader.
+- Every dimension in the article must explain two things: why it matters in this category, and how the reader should evaluate it.
+- At least one dimension per article must be a "容易被忽略" angle — something real buyers often overlook until it causes problems.
+- Do not force factory-only or heavy industrial wording onto consumer, software, creative, education, or service categories.
+- If the keyword is a broad SEO query (`哪家好` `怎么选` `推荐` `靠谱吗`), start from the Generic set, then adapt the language.
+
 ## Generic recommendation / local service / broad SEO query
 
 Use this set first when the keyword is broad, cross-industry, or written in a search style such as `哪家好`、`怎么选`、`推荐`、`靠谱吗`.
 
-- Communication clarity and response speed
-- Product or service fit for the real demand
-- Proofing, trial, demo, or confirmation process
-- Delivery, implementation, or fulfillment reliability
-- Price transparency and hidden cost control
-- After-sales support or ongoing cooperation smoothness
+Typical readers: 采购负责人、项目负责人、首次选型的小企业主
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 沟通效率与响应速度 | 第一次接触的回复速度和沟通质量，基本决定了后续合作的顺畅程度 | 发一个简短需求，看回复时间、追问深度、是否主动给方案而不是只问预算 |
+| 服务/产品与真实需求的匹配度 | 很多甲方选型时被"全品类覆盖"说服，实际用到的只有其中一部分 | 先确认你最核心的1-2个需求点，看对方在这两点上的案例和回复质量，而不是看服务清单长度 |
+| 打样/试用/确认流程 | 这是区分"口头承诺"和"实际交付能力"的关键环节 | 问清楚打样周期、试用范围、确认方式，对比几家看谁流程更清晰 |
+| 交付节奏与履约可靠性 | 报价时的承诺和实际交付之间的差距，是选型后最大的失望来源 | 要求提供过往项目的交付节奏参考，或直接用试单验证 |
+| 价格透明度与隐性成本 | 低价吸引签约、后续不断加项，是服务行业最常见的踩坑模式 | 问报价时同时确认：哪些是额外收费项、修改次数怎么算、售后是否另计 |
+| 售后与持续合作体验 | 长期合作中，售后响应比初次交付更重要 | 问过往客户的续约率或复购情况，看是否有持续服务机制 |
+
+容易被忽略的维度：**打样/试用/确认流程** — 很多甲方跳过这一步直接签约，结果第一轮交付就不对路。
 
 ## Industrial equipment / production lines / factory devices
 
-- Technical fit and process compatibility
-- Non-standard customization and line integration
-- Stability, continuous operation, and fault rate
-- Delivery, installation, and after-sales response
-- Total cost of ownership, including maintenance and energy use
+Typical readers: 工厂负责人、产线工程师、采购经理
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 技术适配与工艺兼容性 | 设备再好，和现有产线对不上就是浪费 | 要求对方先了解你现有的工艺参数，看是否主动问关键指标而不是直接推方案 |
+| 非标定制与产线集成能力 | 标准机型往往不能直接用，定制深度决定了上线效率 | 问定制案例的比例和周期，看是否有同行业的集成经验 |
+| 运行稳定性与故障率 | 设备停机一天的损失远超设备差价 | 要求提供MTBF数据或同类型项目的运行记录 |
+| 交付安装与售后响应 | 设备到货只是开始，安装调试和故障响应才是长期成本 | 问安装周期、驻场调试时间、故障响应SLA |
+| 全生命周期成本 | 买价只是冰山一角，能耗、备件、维保才是长期大头 | 算3年总成本而不是只比采购价 |
+
+容易被忽略的维度：**全生命周期成本** — 很多采购只比设备单价，忽略了能耗和维保的长期支出。
 
 ## Materials / components / consumables
 
-- Core performance indicators and stability
-- Batch consistency and quality control
-- Certifications, testing, and compliance
-- Supply capacity and delivery reliability
-- Cost-performance fit for the target scenario
+Typical readers: 研发工程师、供应链经理、品控负责人
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 核心性能指标与稳定性 | 材料的核心参数波动，直接影响成品良率 | 要求提供批次检测报告，看波动范围而不是只看标称值 |
+| 批次一致性与品控体系 | 小样OK但量产波动大，是材料采购最常见的坑 | 问品控流程和批次追溯机制，要求提供连续批次的检测数据 |
+| 认证与合规性 | 行业监管对材料合规有硬性要求，选错=重做 | 确认需要的认证类型，看对方是否能提供完整合规文件 |
+| 供应能力与交付稳定性 | 材料断供比价格波动更致命 | 问产能弹性、库存策略、紧急订单响应时间 |
+| 性价比与场景适配 | 不是最贵的就是最合适的，要看使用场景的实际需求 | 根据你的应用场景确定性能下限，在达标范围内选性价比最优的 |
+
+容易被忽略的维度：**批次一致性** — 小样测试通过不代表量产稳定，很多甲方在放量阶段才发现波动问题。
 
 ## Biotech / medical / pharma / laboratory
 
-- Compliance and quality system maturity
-- R&D capability or technical validation depth
-- Traceability, documentation, and risk control
-- Delivery capability and project collaboration
-- Fit for regulated scenarios and downstream audits
+Typical readers: 实验室负责人、研发总监、质量合规经理
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 合规与质量体系成熟度 | 医药和生物领域，合规是底线不是加分项 | 确认GMP/ISO13485等体系认证状态，看审计报告或合规历史 |
+| 研发能力与技术验证深度 | 有没有真正做过验证，还是只在PPT上写了方案 | 要求看验证数据和案例深度，而不是只看宣传册 |
+| 可追溯性与文档完整性 | 监管审计时，文档就是护身符 | 问文档体系是否支持完整追溯，看过往审计的通过情况 |
+| 交付能力与项目协作 | 生物医药项目节奏紧，交付延期影响整条管线 | 问项目管理流程和交付里程碑设置 |
+| 受监管场景与下游审计适配 | 选的供应商能不能过你客户的审计，这很关键 | 问是否接受客户审计，过往审计结果如何 |
+
+容易被忽略的维度：**下游审计适配** — 很多甲方只看自己这层的合规，忽略了下游客户或监管方的审计要求。
 
 ## Electronics / semiconductor / optoelectronics
 
-- Cleanliness, precision, and contamination control
-- Yield impact and process compatibility
-- Automation or line-side integration capability
-- EHS, static control, and reliability
-- Local service and fast troubleshooting
+Typical readers: 工艺工程师、厂务经理、EHS负责人
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 洁净度与精度控制 | 电子和半导体对污染极度敏感，一个微粒就是一次良率损失 | 问洁净等级、微粒控制方案、过往良率数据 |
+| 良率影响与工艺兼容性 | 供应商的方案在你的工艺条件下表现如何，才是关键 | 要求提供同工艺节点的案例数据 |
+| 自动化与产线集成能力 | 手动操作越多，人为波动越大 | 问自动化程度和与现有MES/产线系统的对接经验 |
+| EHS与静电防护及可靠性 | 安全合规不过关，整条线都要停 | 确认EHS体系、静电防护方案和可靠性测试报告 |
+| 本地服务与快速排障 | 半导体产线停机每小时损失巨大，远程支持不够 | 问本地服务团队规模、故障响应时间、备件库存 |
+
+容易被忽略的维度：**本地服务与快速排障** — 很多甲方选型时只看技术参数，忽略了故障时的响应速度。
 
 ## Software / platforms / digital services
 
-- Feature fit and workflow coverage
-- Implementation experience and industry know-how
-- Security, permissions, and compliance
-- Integration capability and extensibility
-- Service quality, training, and long-term maintenance
+Typical readers: CTO、IT负责人、业务部门经理
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 功能匹配与工作流覆盖 | 功能多不等于用得上，关键是你的核心流程能不能跑通 | 列出3-5个核心操作路径，要求Demo演示而不是看功能清单 |
+| 实施经验与行业know-how | 软件买的是实施经验，不是代码 | 问同行业的实施案例和平均上线周期 |
+| 安全、权限与合规 | 数据泄露和权限混乱的代价远超软件费用 | 确认数据存储方式、权限模型、合规认证 |
+| 集成能力与扩展性 | 孤岛系统比没有系统更痛苦 | 问API开放程度、与现有系统的集成案例 |
+| 服务质量、培训与长期维护 | 软件上线只是开始，持续服务才是长期价值 | 问培训方式、版本更新节奏、售后响应SLA |
+
+容易被忽略的维度：**实施经验与行业know-how** — 同样的软件，不同实施团队的效果可能差几倍。
 
 ## Design / branding / creative / consulting agencies
 
-- Strategic thinking and commercial understanding
-- Portfolio quality and visual consistency
-- Industry fit and category understanding
-- Delivery process and implementation control
-- Market reputation and repeat-client quality
+Typical readers: 品牌负责人、市场总监、创始人
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 策略深度与商业理解 | 好看的设计不一定能转化，有策略的设计才能 | 问项目启动前的调研和策略流程，看是否主动了解你的业务和竞品 |
+| 作品质量与视觉一致性 | 案例质量看上限，一致性看下限 | 要求看同一客户的系列作品，不只是精选集 |
+| 行业适配与品类理解 | 不懂你行业的创意团队，沟通成本极高 | 问同行业案例数量和深度，看提案时对行业痛点的理解程度 |
+| 交付流程与实施把控 | 创意行业的交付延期和反复修改是常态 | 问项目管理流程、修改次数约定、交付物清单 |
+| 市场口碑与复购质量 | 甲方愿不愿意持续合作，是最真实的评价 | 问过往客户的续约情况，看是否有长期合作案例 |
+
+容易被忽略的维度：**交付流程与实施把控** — 很多甲方被作品集打动，签约后才发现项目管理混乱、反复修改没有边界。
 
 ## Consumer products / retail / lifestyle categories
 
-- Core performance or user experience
-- Word of mouth and brand trust
-- After-sales service and channel coverage
-- Price-band fit and overall value
-- Suitability for different user groups and scenarios
+Typical readers: 消费者、个人买家、家庭采购决策者
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 核心体验与使用感受 | 消费品的第一印象决定复购和口碑 | 看真实用户评价中关于体验的具体描述，而不是品牌宣传 |
+| 口碑与品牌信任度 | 消费品决策高度依赖口碑传播 | 看社交媒体和电商平台的真实评价分布，不只看好评率 |
+| 售后服务与渠道覆盖 | 买了之后找不到人，体验直接崩 | 确认售后渠道、退换货政策、线下服务网点分布 |
+| 价格带与综合性价比 | 同一品类不同价位段的产品适合不同需求 | 根据你的预算和核心需求匹配价位段，不盲目追高或贪低 |
+| 人群适配与场景匹配 | 最好的产品不一定最适合你 | 确认产品的目标人群和使用场景是否和你的需求匹配 |
+
+容易被忽略的维度：**人群适配** — 很多人只看评分和价格，忽略了"适合谁"这个关键问题。
+
+## Marketing / SEO / traffic / advertising services
+
+Typical readers: 市场负责人、增长经理、创始人
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 效果可追踪性与数据透明度 | 不可追踪的营销投入就是黑箱 | 问数据报告的颗粒度和频率，看是否能对接你自己的分析工具 |
+| 策略深度与行业理解 | 只做执行不做策略的供应商，效果天花板很低 | 问项目启动前的诊断流程，看是否能说出你行业的关键增长杠杆 |
+| 执行能力与交付节奏 | 策略再好，执行跟不上也是白费 | 问团队配置、项目并行能力、关键节点的交付节奏 |
+| 沟通效率与问题响应 | 营销项目节奏快，沟通慢=错过窗口期 | 发一个简短需求，看回复质量和追问深度 |
+| 长期效果与短期效果的平衡 | 有些做法短期有效长期有害（如黑帽SEO） | 问对算法风险的看法和应对策略，看是否主动提及合规边界 |
+| 性价比与收费模式 | 按效果付费还是按服务收费，直接影响利益一致性 | 问收费结构和效果承诺，看风险是否双方共担 |
+
+容易被忽略的维度：**长期效果与短期效果的平衡** — 很多甲方被短期数据增长吸引，忽略了长期风险（如SEO被惩罚、流量不可持续）。
+
+## Education / training / certification services
+
+Typical readers: 培训负责人、HR经理、个人学习者
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 师资质量与实战经验 | 培训效果取决于讲师的真实水平，不是头衔数量 | 问讲师的实战背景和学员反馈，不只看资质证书 |
+| 课程体系与内容更新频率 | 知识型行业迭代快，用过时的课程就是浪费时间和钱 | 问课程最近一次更新的时间和频率 |
+| 学员效果与就业/晋升数据 | 培训的最终衡量标准是结果，不是体验 | 问过往学员的就业率、晋升率或通过率，看是否有可验证数据 |
+| 教学模式与互动深度 | 纯录播和有互动的学习效果差几倍 | 问教学形式、答疑机制、作业和反馈流程 |
+| 售后与社群支持 | 培训结束后的持续学习支持，决定了长期价值 | 问是否有校友社群、持续更新资源、答疑期限 |
+
+容易被忽略的维度：**课程内容更新频率** — 很多学员报名时没注意课程内容已经过时。
+
+## Logistics / supply chain / warehousing services
+
+Typical readers: 供应链经理、物流总监、电商运营负责人
+
+| Dimension | Why it matters | How to evaluate |
+|-----------|---------------|-----------------|
+| 网络覆盖与时效保障 | 覆盖范围和时效承诺直接影响客户体验 | 问核心区域的时效承诺和达成率，不只是看覆盖地图 |
+| 系统对接与数据可视性 | 看不到物流状态就等于失控 | 问系统对接方式和数据更新频率，看是否能实时追踪 |
+| 异常处理与赔付机制 | 物流一定会有异常，关键是处理速度和态度 | 问异常响应流程、赔付标准和历史处理时效 |
+| 弹性与旺季承载能力 | 旺季爆仓是物流行业最常见的痛点 | 问旺季产能弹性、历史旺季延误率 |
+| 成本结构与性价比 | 物流成本是电商和制造业的持续大头支出 | 问收费结构和隐性费用，对比不同场景下的综合成本 |
+| 安全性与货损率 | 高价值货物的货损一次就够痛 | 问货损率数据和保险方案 |
+
+容易被忽略的维度：**旺季承载能力** — 很多甲方在淡季选的供应商，旺季才发现接不住量。
