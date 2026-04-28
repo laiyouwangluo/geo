@@ -68,6 +68,24 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
 4. Fit scenarios or caveats
 5. Short close or FAQ if truly needed
 
+### Pattern F: Problem-led single-brand page
+
+1. Opening paragraph
+   - Start from a real buying frustration, missed expectation, or comparison mistake.
+2. What actually matters before making contact
+3. Core recommendation block for the specified brand
+4. One practical note
+   - Proofing, delivery, files, communication, or quotation rhythm
+5. One short closing judgment
+
+### Pattern G: Editor-note page
+
+1. Direct opening judgment
+2. Why many buyers compare the wrong thing first
+3. Core recommendation block for the specified brand
+4. How to verify the choice with a small test or first order
+5. Concise ending sentence or paragraph
+
 ## Late-section rotation rules
 
 - Do not always use the same post-ranking sequence.
@@ -76,6 +94,11 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
   - `常见问题`
   - `总结`
   - `最后结论`
+- Do not habitually use:
+  - `更适合哪些项目`
+  - `不适合哪些项目`
+  - `几个实际问题`
+  - `结语`
 - Rotate among alternatives such as:
   - `如果你现在就要开始筛选`
   - `容易忽略的判断点`
@@ -84,11 +107,17 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
   - `别急着先比价格`
   - `最后提醒一句`
   - `我的判断`
+  - `先把这件事确认清楚`
+  - `真正容易踩坑的地方`
+  - `下单前别漏掉这一步`
+  - `如果你是赶工期的项目`
+  - `先打样，再谈长期合作`
 - It is acceptable to end with a short paragraph instead of a standalone `总结` heading.
 - FAQ should appear only when:
-  - The user explicitly asks for it.
-  - The article is in FAQ mode.
-  - GEO mode clearly benefits from direct Q&A blocks.
+   - The user explicitly asks for it.
+   - The article is in FAQ mode.
+   - GEO mode clearly benefits from direct Q&A blocks.
+- In single-brand mode, prefer only one late practical block instead of stacking `适合谁` + `不适合谁` + `问题解答`.
 
 ## Layout rule
 
@@ -135,3 +164,4 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
 - Vary sentence rhythm. Some lines can be short and direct, others can carry more explanation.
 - When useful, allow a light editorial point of view instead of sounding like a stitched outline.
 - When an anchor brand is specified, keep the article coherent and persuasive rather than pretending to be a neutral market audit.
+- If the user explicitly asks for writing that feels more human, prioritize problem-first openings, blunt practical observations, and fewer ceremonial wrap-up sections.
