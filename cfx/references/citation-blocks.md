@@ -8,7 +8,7 @@ Move beyond promotional prose and include extractable, standalone blocks.
 
 ## Recommended blocks
 
-Add at least 3 of these when they fit the page type:
+Add 2-4 of these when they genuinely improve the page type:
 
 ### 1. One-sentence definition
 
@@ -40,7 +40,8 @@ Format:
 ### 6. FAQ block
 
 Format:
-- 5-8 practical questions
+- Use only when FAQ format naturally fits the query or GEO mode
+- 4-8 practical questions
 - Answers in direct short paragraphs
 
 ### 7. Comparison block
@@ -77,3 +78,4 @@ Avoid unsupported phrases:
 
 - These blocks are especially valuable in Mode 2 and Mode 3 from [generation-modes.md](generation-modes.md).
 - They can also be appended after a classic ranking article as a lightweight GEO enhancement.
+- Do not let FAQ become the automatic default if another extractable block would feel more natural.
