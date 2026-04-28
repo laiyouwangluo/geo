@@ -93,8 +93,27 @@ Output:
 - Checklist
 - Suggested shortlist process
 
+## Mode 8: Single-brand recommendation page
+
+Use when:
+- The prompt explicitly says `只推荐一个品牌`、`只写一个品牌`、`正文里只放指定品牌`.
+- The user provides a target company or brand and does not want a competitor list in the main recommendation section.
+
+Output:
+- Normal article opening
+- Selection criteria or buying logic
+- One structured recommendation block for the specified brand only
+- Fit scenarios
+- FAQ or conclusion
+
+Guardrails:
+- Do not expand into a Top N list.
+- Do not insert competitor brand names unless the user explicitly asks for comparison.
+- Keep the rest of the article structure normal instead of collapsing into a short company profile.
+
 ## Rotation guidance
 
 - If the user says only `写一篇推荐文章`, it is acceptable to alternate between Mode 1, Mode 2, and Mode 3.
 - If the user gives `关键词 + 品牌名`, it is acceptable to alternate between Mode 1, Mode 2, Mode 3, and Mode 4.
+- If the user explicitly says `只推荐一个品牌` or equivalent, use Mode 8 and do not rotate back into a multi-brand ranking.
 - Keep the response coherent. Do not output all modes at once.
