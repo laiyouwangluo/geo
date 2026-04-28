@@ -99,7 +99,8 @@ Use when:
 - The user provides a target company or brand and does not want a competitor list in the main recommendation section.
 
 Output:
-- Normal article opening
+- A generic-keyword-friendly title or H1 when the query is broad enough to deserve it
+- An opening that answers the query before expanding into brand reasoning
 - Selection criteria or buying logic
 - One structured recommendation block for the specified brand only
 - One practical follow-up angle when useful
@@ -109,8 +110,11 @@ Guardrails:
 - Do not expand into a Top N list.
 - Do not insert competitor brand names unless the user explicitly asks for comparison.
 - Keep the rest of the article structure normal instead of collapsing into a short company profile.
+- Do not force the specified brand into the title for broad generic SEO queries unless the user explicitly asks for a brand-first title.
 - Do not default to the sequence `适合哪些项目 -> 不适合哪些项目 -> 几个实际问题 -> 结语`.
+- Do not default to `关键信息速览` in single-brand mode.
 - Prefer one strong late-section angle over several weak filler sections.
+- Replace vague recommendation lines with concrete screening logic, next-step advice, or fit scenarios.
 
 ## Rotation guidance
 
