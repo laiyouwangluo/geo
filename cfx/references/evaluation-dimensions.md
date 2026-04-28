@@ -4,6 +4,17 @@ Use this file as a starting map, then rewrite the dimensions so they match the u
 
 Select 3-5 dimensions instead of copying everything.
 
+## Generic recommendation / local service / broad SEO query
+
+Use this set first when the keyword is broad, cross-industry, or written in a search style such as `哪家好`、`怎么选`、`推荐`、`靠谱吗`.
+
+- Communication clarity and response speed
+- Product or service fit for the real demand
+- Proofing, trial, demo, or confirmation process
+- Delivery, implementation, or fulfillment reliability
+- Price transparency and hidden cost control
+- After-sales support or ongoing cooperation smoothness
+
 ## Industrial equipment / production lines / factory devices
 
 - Technical fit and process compatibility
