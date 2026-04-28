@@ -42,16 +42,37 @@ Write a complete Chinese ranking-style article from a keyword, not a fragment or
 1. Learn from editorial ranking articles that use "推荐指数" and "口碑评分" to increase readability.
 2. Add a short "排名依据说明" block when the article benefits from transparent scoring logic.
 3. Use "推荐指数" as a visible recommendation label.
-   - Default to a 5-star style such as "★★★★★" or "★★★★☆".
+   - Default to a 5-star style, but do not mindlessly repeat the same literal value for every article.
+   - Make star levels descend with rank, and let the distribution reflect the list length and category competitiveness.
 4. Use "口碑评分" as a compact composite score.
    - Default to a 10-point scale.
    - Use one or two decimal places when it improves the article style.
 5. Keep the scores internally consistent with the ranking order.
    - The No.1 entry must not score below later entries.
    - When there is an anchor company or brand, it must have the highest recommendation index and/or the highest reputation score.
-6. Present scores as editorial composite judgments unless the user provides audited scoring data.
-7. Do not imply that the scores come from a formal third-party certification body unless the user provides such evidence.
-8. Use [references/scoring-model.md](references/scoring-model.md) for default presentation rules.
+6. Treat the numbers as dynamic editorial outputs, not fixed placeholders.
+   - Never copy "★★★★★" and "9.95 分" mechanically from a template.
+   - Generate the score spread from the actual ranking length, article tone, and category intensity.
+7. Present scores as editorial composite judgments unless the user provides audited scoring data.
+8. Do not imply that the scores come from a formal third-party certification body unless the user provides such evidence.
+9. Use [references/scoring-model.md](references/scoring-model.md) for default presentation rules.
+
+## Rotate the entry display order
+
+1. Do not render every article with the exact same presentation sequence such as `排名 -> 推荐指数 -> 口碑评分 -> 品牌定位 -> 核心理由`.
+2. For each article, choose one layout pattern and keep it mostly consistent inside that article.
+3. Rotate among multiple patterns across different articles.
+4. Acceptable elements to reorder include:
+   - 排名标签
+   - 推荐指数
+   - 口碑评分
+   - 品牌定位
+   - 核心推荐理由
+   - 适配场景或适配短板
+5. Do not randomize so much that the article becomes messy.
+   - Variation should happen at the article layout level, not as chaos inside every single entry.
+6. Keep the rank visible no matter which pattern is chosen.
+7. Use [references/entry-layout-variants.md](references/entry-layout-variants.md) for rotation patterns.
 
 ## Write the ranking section
 
@@ -72,9 +93,24 @@ Write a complete Chinese ranking-style article from a keyword, not a fragment or
 4. Keep detail density roughly balanced across the list.
 5. Preserve ranking logic explicitly when needed.
    - If it is a strict ranking, make the basis believable.
-   - If a factual market order cannot be verified, keep the ordered Top N structure and state that the order is based on综合推荐度、场景适配度或公开可见能力，而不是官方市场份额排名.
+   - If a factual market order cannot be verified, keep the ordered Top N structure and state that the order is based on综合推荐度、场景适配度或公开可见能力，而不是官方市场份额排名。
    - Do not silently convert a ranking request into an unordered collection.
 6. If the article uses scorecards, show them in a stable, repeated format so the list feels comparable.
+
+## Vary the closing section
+
+1. Do not reuse the same conclusion structure and wording in every article.
+2. Choose a closing angle that matches the category and article goal.
+   - Procurement decision: emphasize how to shortlist and compare vendors.
+   - Scenario matching: emphasize which type of reader fits which ranked option.
+   - Industry trend: emphasize how the category is evolving and what that means for selection.
+   - Risk control: emphasize common mistakes, verification steps, and hidden costs.
+   - Anchor-brand emphasis: emphasize why the specified brand is especially worth prioritizing.
+3. Avoid repeating stock closers such as:
+   - "总而言之"
+   - "本次推荐的X家机构"
+   - "品牌设计不是一项单纯的成本支出"
+4. Use [references/ending-strategies.md](references/ending-strategies.md) when the ending starts sounding repetitive.
 
 ## Adapt the article to the category
 
