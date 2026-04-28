@@ -42,6 +42,24 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - Pick one main mode per response and execute it clearly.
 6. Treat the rotation as intentional variation, not randomness without structure.
 
+## Humanize the structure and voice
+
+1. Treat the skill as an editorial writing guide, not a fixed six-section template.
+2. Do not repeatedly end articles with the same sequence such as `选型建议与验证清单 -> 常见问题 -> 总结`.
+3. FAQ is optional.
+   - Use it when the user explicitly asks for FAQ, the topic has strong search intent, or GEO mode clearly benefits from it.
+   - Do not append FAQ by habit.
+4. Summary is optional as a standalone heading.
+   - It can be replaced by a short judgment paragraph, a risk reminder, a shortlist method, or one closing viewpoint.
+5. After the ranking body, usually keep only 1-2 follow-up sections unless the user explicitly wants a longer buyer guide.
+6. Vary heading wording across articles.
+   - Avoid reusing exact headings such as `选型建议与验证清单`, `常见问题`, `总结`, `最后结论`.
+7. Write with a more human editorial rhythm.
+   - Mix short and long sentences.
+   - Allow a clear point of view when appropriate.
+   - Prefer natural transitions over mechanical numbering.
+8. Use [references/article-structure.md](references/article-structure.md) and [references/ending-strategies.md](references/ending-strategies.md) to rotate article skeletons and endings deliberately.
+
 ## Determine the article frame
 
 1. Infer the ranking object from the keyword.
@@ -126,7 +144,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 ## Force citation-friendly blocks
 
 1. Make the page easier for AI systems to quote and extract.
-2. Include at least 3 of these blocks whenever they fit the page type:
+2. Include 2-4 of these blocks when they clearly help the page type.
    - One-sentence entity definition
    - Who it fits
    - Who it does not fit
@@ -135,7 +153,8 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - FAQ
    - Comparison block
    - Quotable conclusion line
-3. Use [references/citation-blocks.md](references/citation-blocks.md) when the page starts sounding too soft or too promotional.
+3. FAQ should be optional inside these blocks, not the default ending for every article.
+4. Use [references/citation-blocks.md](references/citation-blocks.md) when the page starts sounding too soft or too promotional.
 
 ## Rotate the entry display order
 
