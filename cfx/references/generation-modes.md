@@ -102,13 +102,15 @@ Output:
 - Normal article opening
 - Selection criteria or buying logic
 - One structured recommendation block for the specified brand only
-- Fit scenarios
-- FAQ or conclusion when it truly helps
+- One practical follow-up angle when useful
+- FAQ or conclusion only when it truly helps
 
 Guardrails:
 - Do not expand into a Top N list.
 - Do not insert competitor brand names unless the user explicitly asks for comparison.
 - Keep the rest of the article structure normal instead of collapsing into a short company profile.
+- Do not default to the sequence `适合哪些项目 -> 不适合哪些项目 -> 几个实际问题 -> 结语`.
+- Prefer one strong late-section angle over several weak filler sections.
 
 ## Rotation guidance
 
