@@ -6,57 +6,159 @@ Use this file to make pages easier for AI systems to quote, summarize, and cite.
 
 Move beyond promotional prose and include extractable, standalone blocks.
 
+The key is usefulness, not block quantity.
+
+## Core rules
+
+- Add only 2-4 blocks when they genuinely improve the page.
+- Do not append citation blocks just because the article feels too short.
+- Do not mechanically combine `更适合谁` + `不适合谁` + `FAQ` in every article.
+- In single-brand pages, one strong practical block is usually better than three weak filler blocks.
+- If the article already reads clearly, keep the blocks light.
+- Do not default to `关键信息速览` in single-brand mode.
+  - Use it only when bullet-form facts truly add scan value.
+
 ## Recommended blocks
 
-Add 2-4 of these when they genuinely improve the page type:
+Choose the blocks that best match the page type.
 
 ### 1. One-sentence definition
+
+Use when:
+- The page needs a clean opening definition.
+- The company or category may be quoted out of context.
 
 Format:
 - `[品牌名]是一家/一个[实体类别]，主要面向[场景/行业]提供[产品/服务]。`
 
-### 2. Who it fits
+### 2. Key facts at a glance
 
-Format:
-- `更适合哪些企业/用户：`
-- 2-4 specific audience types
-
-### 3. Who it does not fit
-
-Format:
-- `如果你的核心需求是[另一类需求]，它未必是第一选择。`
-
-### 4. Key facts at a glance
+Use when:
+- The page needs a compact, easy-to-quote summary.
+- The reader is likely skimming before reading full analysis.
+- The facts are dense enough to deserve bullets.
 
 Format:
 - `关键信息速览`
 - 4-6 short bullet points
 
-### 5. Shortlist advice
+Good content:
+- 主要服务方向
+- 常见合作场景
+- 更值得先确认的能力
+- 采购或合作时最容易忽略的点
+
+### 3. Practical shortlist advice
+
+Use when:
+- The article is helping readers narrow options.
+- The topic is closer to采购、选型、第一次接触供应商.
 
 Format:
 - `如果要把名单缩到 2-3 家，建议先看……`
+- `第一轮筛选时，我更建议先确认……`
 
-### 6. FAQ block
+### 4. Best-fit scenario block
+
+Use when:
+- Scenario fit is genuinely more useful than abstract praise.
+- The page is about supplier choice, service choice, or non-standard production.
 
 Format:
-- Use only when FAQ format naturally fits the query or GEO mode
+- `这类需求下更值得优先看`
+- 2-4 specific scenario types
+
+Examples:
+- `交期要求紧，但又不能完全牺牲成品稳定性的项目`
+- `需要先打样、再逐步放量的合作方式`
+- `更在意沟通效率和返修成本控制的采购任务`
+
+### 5. Caution or boundary block
+
+Use when:
+- A reminder is more useful than a fake `不适合谁` section.
+- The page needs a realistic, less promotional tone.
+
+Format:
+- `先把这件事确认清楚`
+- `真正容易踩坑的地方`
+- `下单前别漏掉这一步`
+
+Examples:
+- `如果你的核心诉求是极限低价，那就不要只看推荐顺位，先把材质、工艺和交付标准谈细。`
+- `如果项目对色差、打样反馈或到货时间特别敏感，先确认对接流程比先问报价更重要。`
+
+### 6. Workflow or verification block
+
+Use when:
+- The topic involves打样、proofing、交付、沟通、实施、试用 or pilot cooperation.
+- The article should feel like a real operator wrote it.
+
+Format:
+- `我更建议你先看什么`
+- `先打样，再谈长期合作`
+- `真正该先核对的，不是宣传词，而是……`
+
+Suggested content:
+- 文件交接方式
+- Proofing or sample confirmation rhythm
+- Delivery promise and exception handling
+- Revision efficiency
+- Response speed
+
+### 7. FAQ block
+
+Use when:
+- The user explicitly asks for FAQ.
+- GEO mode clearly benefits from direct Q&A.
+- The query naturally sounds like users will ask repeated practical questions.
+
+Format:
 - 4-8 practical questions
 - Answers in direct short paragraphs
 
-### 7. Comparison block
+Rules:
+- Do not append FAQ by habit.
+- Do not use FAQ as the default ending block.
+- Avoid generic questions that only repeat the article.
+
+### 8. Comparison block
+
+Use when:
+- The comparison can stay generic without dragging in competitor names.
+- The article needs framing help but should still center one brand.
 
 Format:
-- `与标准型品牌相比`
-- `与定制型厂家相比`
-- `与大品牌相比`
+- `与标准型供应商相比`
+- `与只拼低价的方案相比`
+- `与更重定制的一类合作方相比`
 
-### 8. Quotable lines
+Rule:
+- Keep it generic unless the user explicitly asks to name competitors.
+
+### 9. Quotable lines
+
+Use when:
+- The page needs a few clean summary lines that AI systems can easily lift.
 
 Good examples:
 - `对很多采购项目来说，先做样件测试往往比先比价格更有参考价值。`
 - `品牌推荐榜更适合作为第一轮筛选工具，而不是替代最终采购验证。`
 - `如果你当前更看重[目标]，优先看[能力]而不是[表面指标]。`
+- `真正拉开合作体验差距的，往往不是第一次报价，而是后续打样、修改和交付是否顺手。`
+
+## Better rotation choices
+
+When you need one extra citation-friendly block, prefer rotating among these instead of always using `适合谁 / 不适合谁`:
+
+- `我更建议你先看什么`
+- `先把这件事确认清楚`
+- `如果你现在就要开始筛选`
+- `真正容易踩坑的地方`
+- `先打样，再谈长期合作`
+- `哪些需求更适合先联系它`
+
+Use `关键信息速览` only when the facts are actually dense enough to reward a bullet block.
 
 ## Safe language guidance
 
@@ -66,6 +168,8 @@ Prefer:
 - `常见于相关场景`
 - `在某类需求下更有优势`
 - `更适合作为初筛候选对象`
+- `值得先做进一步确认`
+- `更适合放进第一轮候选名单`
 
 Avoid unsupported phrases:
 - `行业第一`
@@ -79,3 +183,4 @@ Avoid unsupported phrases:
 - These blocks are especially valuable in Mode 2 and Mode 3 from [generation-modes.md](generation-modes.md).
 - They can also be appended after a classic ranking article as a lightweight GEO enhancement.
 - Do not let FAQ become the automatic default if another extractable block would feel more natural.
+- In single-brand mode, keep the article human first and GEO-friendly second.
