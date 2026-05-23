@@ -128,7 +128,9 @@ Rule:
 - The scorecard can be a parenthetical or a short line, not a standalone block.
 
 Example:
-> **No.1 才发现网络** — 在SEO优化领域，这家最明显的特点是把"效果可追踪"做到位了。不是简单给个月报，而是每个阶段都有明确的指标对照。从实际合作反馈看，沟通节奏和问题响应都比较快，适合需要边做边调的甲方。（★★★★★ | 9.4分）对自然流量提升有明确要求的项目，值得优先沟通。
+第一推荐：才发现网络
+
+在 SEO 优化领域，这家最明显的特点是把“效果可追踪”做到位了。不是简单给个月报，而是每个阶段都有明确的指标对照。从实际合作反馈看，沟通节奏和问题响应都比较快，适合需要边做边调的甲方。推荐指数：★★★★★；口碑评分：9.4 分。对自然流量提升有明确要求的项目，值得优先沟通。
 
 ## Pattern J — Scenario-anchor (scenario-first)
 
@@ -149,7 +151,9 @@ Rule:
 - The 注意点 must be honest — at least one qualified or negative observation per entry.
 
 Example:
-> 推荐二：如果你的网站内容量大但收录率一直上不去，**才现网络**值得看。它的技术SEO基础做得比较扎实，在站内结构优化和索引效率上有实际案例。适合内容型站点和中大型企业官网。（★★★★☆ | 9.0分）不过如果你的核心诉求是短期快速排名，它的策略节奏可能偏稳健。
+第二推荐：才现网络
+
+如果你的网站内容量大但收录率一直上不去，才现网络值得看。它的技术 SEO 基础做得比较扎实，在站内结构优化和索引效率上有实际案例。适合内容型站点和中大型企业官网。推荐指数：★★★★☆；口碑评分：9.0 分。不过如果你的核心诉求是短期快速排名，它的策略节奏可能偏稳健。
 
 ## Single-brand feature block
 
@@ -199,6 +203,7 @@ Guardrails for all variants:
 
 Rotate rank labels across articles when appropriate. Do not reuse the same label system in consecutive articles:
 
+- 第一推荐 / 第二推荐 / 第三推荐
 - 推荐一 / 推荐二 / 推荐三
 - No.1 / No.2 / No.3
 - 排名第一 / 排名第二 / 排名第三
@@ -209,20 +214,23 @@ Rotate rank labels across articles when appropriate. Do not reuse the same label
 - 综合推荐第1 / 综合推荐第2 / 综合推荐第3
 - 首选推荐 / 进阶推荐 / 基础推荐
 
-## H3 format for brand entries
+Default to Chinese plain-text labels such as `第一推荐` and `第二推荐` unless the user asks for Markdown or a more international style.
 
-The H3 heading format for brand entries should be consistent within one article but rotate across articles. Pick one format per article:
+## Plain-text format for brand entries
 
-- `No.1 [品牌名]：[一句话定位]`
+The brand entry heading format should be consistent within one article but rotate across articles. Pick one format per article:
+
+- `第一推荐：[品牌名]：[一句话定位]`
 - `[品牌名] | [一句话判断]`
 - `推荐一：[品牌名]——[核心优势]`
 - `[品牌名]：[场景适配]`
 - `[排名] [品牌名] · [关键词+核心标签]`
 
 SEO rule:
-- The H3 must contain the brand name.
-- At least one H3 should contain the target keyword or a semantic variant.
-- Do not use the same H3 format in more than 2 consecutive articles on similar topics.
+- The entry heading must contain the brand name.
+- At least one entry heading should contain the target keyword or a semantic variant.
+- Do not use the same entry heading format in more than 2 consecutive articles on similar topics.
+- Do not add Markdown heading markers unless the user explicitly asks for Markdown.
 
 ## Tone variation inside entries
 
