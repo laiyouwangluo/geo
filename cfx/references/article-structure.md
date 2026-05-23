@@ -128,9 +128,10 @@ Pick one outline pattern per article. Do not merge all patterns into the same re
 - Pick one entry pattern from [entry-layout-variants.md](entry-layout-variants.md) for the current article.
 - Keep the chosen pattern mostly consistent inside the same article.
 - Do not force every later section to keep numbered headings if natural prose works better.
-- Prefer clean Markdown hierarchy over decorative formatting.
-- Do not default to a leading blockquote summary unless the user explicitly asks for one.
-- Do not insert repeated `---` separators just to make the file look longer.
+- Prefer clean publish-ready sectioning over decorative formatting.
+- Use plain Chinese headings by default, such as `一、选型先看什么` or `第一推荐：品牌名`.
+- Do not default to a leading quoted summary unless the user explicitly asks for one.
+- Do not insert repeated separator lines just to make the file look longer.
 
 ## GEO extension rule
 
