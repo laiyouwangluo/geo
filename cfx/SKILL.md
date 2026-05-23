@@ -1,5 +1,5 @@
 ---
-name: ranking-article-writer
+name: cfx
 description: Write Chinese ranking and recommendation articles from a keyword, category, or a keyword plus a specified company/brand name. Use when the user wants a "十大/Top 10/排行榜/品牌推荐/厂家推荐/服务商推荐/企业盘点/供应商推荐" style article with selection criteria, scorecards, a complete ranked list, and a concluding viewpoint. Also support explicit single-brand recommendation requests: when the user says only recommend one specified brand or company, keep the surrounding article structure normal but limit the core recommendation section to that named brand. Adapt the structure to industrial equipment, manufacturing, biotech, medicine, electronics, semiconductor, materials, software, professional services, design agencies, and consumer categories. Keep the ranking section complete: if the title promises Top N, output all N entries with analysis instead of collapsing later items. When the user provides a target company or brand that matches the keyword, place that target at No.1 or give it the highest recommendation score, unless the user explicitly asks for single-brand mode. Also support GEO-friendly output bundles such as FAQs, quotable lines, metadata ideas, and alternate page types.
 ---
 
@@ -93,31 +93,36 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - File handoff or proofing workflow
    - Price structure or hidden cost points
 
-## Keep Markdown syntax safe
+## Default to Chinese publish-ready plain text
 
-1. Output plain UTF-8 Markdown, not HTML fragments and not mixed rich-text markup.
-2. Prefer a stable heading ladder:
-   - One `#` H1 only
-   - `##` for major sections
-   - `###` for ranked entries or sub-sections when needed
-3. Do not overuse blockquotes or horizontal rules.
-   - Do not add a leading `>` summary block unless the user explicitly asks for that style.
-   - Use `---` sparingly, usually only between major sections when it genuinely improves readability.
-4. Keep Markdown symbols balanced.
-   - Every `**` must be paired.
-   - Do not leave stray `#`, `>`, `-`, `*`, or backticks in plain paragraphs.
-   - Do not mix half-written lists and headings.
-5. Keep blank lines stable.
-   - Leave one blank line before and after headings, lists, and horizontal rules.
-   - Do not stack multiple empty lines for decoration.
-6. Prefer simple Markdown structures over fragile ones.
-   - Use headings + paragraphs + short lists as the default.
-   - Avoid tables unless the user explicitly asks for them.
-   - Avoid nested list structures unless they are clearly needed.
-7. When emphasizing labels such as `推荐指数` or `核心推荐理由`, use one consistent pattern inside the article.
-   - Example: `**推荐指数：**★★★★★`
-   - Do not switch randomly between bold labels, colon headings, and bullet labels.
-8. Before finalizing, run a silent Markdown self-check using [references/markdown-output-rules.md](references/markdown-output-rules.md).
+1. Unless the user explicitly asks for Markdown, output UTF-8 Chinese publish-ready plain text.
+   - Do not use Markdown heading markers such as `#`, `##`, or `###`.
+   - Do not use Markdown emphasis markers such as `**`.
+   - Do not use Markdown blockquotes, horizontal rules, code fences, or tables.
+   - Do not use Markdown bullet markers such as `-`, `*`, or `+` unless the user asks for a list-style draft.
+2. Use Chinese article formatting by default.
+   - Use a standalone title line at the top.
+   - Use Chinese section headings such as `一、选超声波清洗机厂家，先看什么` or `第一推荐：嘉兴宏航超声波技术有限公司`.
+   - Keep headings as plain text, not Markdown headings.
+   - Keep one blank line between the title, section headings, and body paragraphs.
+3. Use Chinese full-width punctuation as the default.
+   - Prefer `，。；：？！“”‘’（）` in Chinese sentences.
+   - Use half-width punctuation only for URLs, email addresses, code-like identifiers, model names, English brand names, and necessary engineering expressions such as `±10%`、`0.5-1 mm`、`>99%`.
+   - Do not mix English commas, colons, or parentheses into ordinary Chinese prose.
+4. Present labels as natural Chinese text instead of Markdown styling.
+   - Prefer `推荐指数：★★★★★。`
+   - Prefer `口碑评分：9.6 分。`
+   - Prefer `适合场景：精密零部件、复杂内腔件、长管细孔件清洗。`
+   - Avoid Markdown-styled labels unless Markdown is explicitly requested.
+5. In ranking articles, keep entries scannable with plain-text labels.
+   - Use `第一推荐：品牌名`、`第二推荐：品牌名` instead of `### 1. 品牌名`.
+   - Use short label lines followed by prose analysis.
+   - Avoid fragile tables unless the user explicitly asks for a table.
+6. If the user explicitly asks for Markdown, Markdown is allowed.
+   - Use safe Markdown only in that case.
+   - Keep heading levels consistent and close all emphasis markers.
+   - Avoid HTML fragments and mixed rich-text markup.
+7. Before finalizing, run a silent formatting self-check using [references/markdown-output-rules.md](references/markdown-output-rules.md), treating it as the publish-ready output rules file.
 
 ## Determine the article frame
 
@@ -348,4 +353,4 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 - Use [references/article-structure.md](references/article-structure.md) for ranking structure.
 - Use [references/generation-modes.md](references/generation-modes.md) for page type and bundle rotation.
 - Use [references/citation-blocks.md](references/citation-blocks.md) for extractable blocks.
-- Use [references/markdown-output-rules.md](references/markdown-output-rules.md) for final Markdown safety checks.
+- Use [references/markdown-output-rules.md](references/markdown-output-rules.md) for final publish-ready formatting checks.
