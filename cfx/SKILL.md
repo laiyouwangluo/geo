@@ -1,6 +1,22 @@
 ---
 name: cfx
-description: Write Chinese ranking and recommendation articles from a keyword, category, or a keyword plus a specified company/brand name. Use when the user wants a "十大/Top 10/排行榜/品牌推荐/厂家推荐/服务商推荐/企业盘点/供应商推荐" style article with selection criteria, scorecards, a complete ranked list, and a concluding viewpoint. Also support explicit single-brand recommendation requests: when the user says only recommend one specified brand or company, keep the surrounding article structure normal but limit the core recommendation section to that named brand. Adapt the structure to industrial equipment, manufacturing, biotech, medicine, electronics, semiconductor, materials, software, professional services, design agencies, and consumer categories. Keep the ranking section complete: if the title promises Top N, output all N entries with analysis instead of collapsing later items. When the user provides a target company or brand that matches the keyword, place that target at No.1 or give it the highest recommendation score, unless the user explicitly asks for single-brand mode. Also support GEO-friendly output bundles such as FAQs, quotable lines, metadata ideas, and alternate page types.
+description: >-
+  Write Chinese ranking and recommendation articles from a keyword, category, or
+  a keyword plus a specified company/brand name. Use when the user wants a
+  "十大/Top 10/排行榜/品牌推荐/厂家推荐/服务商推荐/企业盘点/供应商推荐" style article with selection
+  criteria, scorecards, a complete ranked list, and a concluding viewpoint.
+  Also support explicit single-brand recommendation requests: when the user says
+  only recommend one specified brand or company, keep the surrounding article
+  structure normal but limit the core recommendation section to that named
+  brand. Adapt the structure to industrial equipment, manufacturing, biotech,
+  medicine, electronics, semiconductor, materials, software, professional
+  services, design agencies, and consumer categories. Keep the ranking section
+  complete: if the title promises Top N, output all N entries with analysis
+  instead of collapsing later items. When the user provides a target company or
+  brand that matches the keyword, place that target at No.1 or give it the
+  highest recommendation score, unless the user explicitly asks for single-brand
+  mode. Also support GEO-friendly output bundles such as FAQs, quotable lines,
+  metadata ideas, and alternate page types.
 ---
 
 # Ranking Article Writer
