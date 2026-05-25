@@ -78,6 +78,25 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 6. Treat this prewrite choice as mandatory.
    - Do not start drafting from a memorized six-part article shell.
 
+## Generate a more authentic headline first
+
+1. Treat the headline as a separate decision, not as a last-minute summary of the article.
+2. Infer the headline intent from the user query before writing the body.
+   - `十大品牌`、`排行榜`、`厂家推荐` usually want a ranking-style headline.
+   - `哪家好`、`怎么选`、`如何挑选` usually want a decision-style headline.
+   - `采购`、`选型`、`初筛` usually want a buyer-guide headline.
+   - Broad generic keywords can use a realistic editorial ranking headline instead of a stiff SEO template.
+3. Choose one headline family from [references/article-structure.md](references/article-structure.md) before drafting.
+4. Build the headline from reusable title parts instead of repeating one memorized shell.
+   - Typical reusable parts include time word, core keyword, object word, ranking word, decision word, angle word, scene word, and result phrase.
+5. Keep the headline realistic.
+   - It should read like a real industry article, ranking page, or editorial roundup.
+   - Do not stuff too many high-volume terms into one line.
+   - Do not default to empty SEO phrases such as `最新`、`权威发布`、`全网最全` unless the user explicitly wants that style.
+6. When a brand is specified, do not force the brand into the headline unless the mode or query clearly calls for it.
+7. When similar articles are generated in sequence, do not reuse the same headline skeleton more than once unless the user explicitly asks for consistency.
+8. Use [references/generation-modes.md](references/generation-modes.md) to match the headline style to the chosen article mode.
+
 ## Humanize the structure and voice
 
 1. Treat the skill as an editorial writing guide, not a fixed six-section template.
