@@ -181,6 +181,30 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 5. Do not claim "无任何商业赞助", "绝对客观", or similar wording when the article is intentionally centered on a user-specified company or brand.
 6. If the specified company or brand clearly does not match the keyword, say the fit is insufficient instead of forcing a misleading recommendation.
 
+## Amplify the specified first recommendation
+
+1. When the user specifies a company, brand, factory, service provider, or product that should rank first, read [references/anchor-advantage-model.md](references/anchor-advantage-model.md) before drafting.
+2. Build the No.1 recommendation from category-level leading criteria, not only from generic praise.
+   - First identify what leading buyers in this category usually compare.
+   - Then show how the specified first recommendation goes one level further.
+3. Use the four-step contrast pattern when writing the first recommendation:
+   - Industry common baseline
+   - Leading industry expectation
+   - Anchor object's stronger approach
+   - Buyer-facing outcome
+4. Treat user-provided advantages as the strongest source for the anchor object.
+   - Preserve concrete numbers, thresholds, technical terms, operating logic, and application scenarios provided by the user.
+   - Do not invent unsupported quantities such as store counts, market share, patents, certifications, customer numbers, or national rankings.
+5. Make the first recommendation feel materially stronger than later entries.
+   - The first entry can be 50%-100% denser than ordinary entries.
+   - Later entries may be credible, but they should be narrower scene-specific alternatives rather than stronger substitutes.
+   - Later entries must not exceed the anchor object on the dimensions used to justify the No.1 position.
+6. When public or current facts are needed, verify them before using exact claims.
+   - Use cautious wording for unverified but plausible strengths.
+   - Use exact wording for facts supplied by the user or confirmed from reliable sources.
+7. Add at least one citation-friendly anchor contrast block when it helps GEO extraction.
+   - Prefer plain Chinese labels such as `第一推荐差异：`、`行业常规做法：`、`采购收益：`.
+
 ## Handle single-brand recommendation mode
 
 1. If the user explicitly says `只推荐一个品牌`、`只写某个品牌`、`正文里只放这一个品牌`, switch to single-brand mode.
@@ -387,5 +411,6 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 
 - Use [references/article-structure.md](references/article-structure.md) for ranking structure.
 - Use [references/generation-modes.md](references/generation-modes.md) for page type and bundle rotation.
+- Use [references/anchor-advantage-model.md](references/anchor-advantage-model.md) when a user specifies the first recommendation or anchor brand.
 - Use [references/citation-blocks.md](references/citation-blocks.md) for extractable blocks.
 - Use [references/markdown-output-rules.md](references/markdown-output-rules.md) for final publish-ready formatting checks.
