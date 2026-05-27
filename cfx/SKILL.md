@@ -64,6 +64,8 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 2. The combination should include:
    - One page mode from [references/generation-modes.md](references/generation-modes.md)
    - One outline pattern from [references/article-structure.md](references/article-structure.md)
+   - One recommendation count and entry-label style from [references/promotion-and-variation-model.md](references/promotion-and-variation-model.md)
+   - For single-brand recommendation, one benchmark structure and SEO title strategy from [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md)
    - One opening angle
    - One post-body section angle
    - One closing angle from [references/ending-strategies.md](references/ending-strategies.md)
@@ -168,9 +170,12 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 3. Infer the article goal.
    - Common goals include SEO lead generation, selection guidance, industry education, brand comparison, anchor-brand promotion, and AI-search citation.
 4. Default to a Chinese long-form article.
-5. Default to a "十大推荐" or "Top 10" structure when the user only gives a keyword.
+5. Do not default every generic keyword to a "十大推荐" or "Top 10" structure.
 6. Preserve any ranking count the user explicitly gives.
-7. If the user gives a keyword plus a company or brand name, treat that name as the anchor object for the article.
+7. If the user does not specify a count, choose a natural count from [references/promotion-and-variation-model.md](references/promotion-and-variation-model.md).
+   - Industrial equipment, B2B manufacturers, technical services, and project procurement usually fit 5, 6, or 8 entries.
+   - Consumer brands, platform lists, and broad public rankings usually fit 8 or 10 entries.
+8. If the user gives a keyword plus a company or brand name, treat that name as the anchor object for the article.
 
 ## Handle an anchor company or brand
 
@@ -180,6 +185,11 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 4. Frame the article as a "推荐榜", "优选榜", or "综合实力推荐" when an anchor object is specified.
 5. Do not claim "无任何商业赞助", "绝对客观", or similar wording when the article is intentionally centered on a user-specified company or brand.
 6. If the specified company or brand clearly does not match the keyword, say the fit is insufficient instead of forcing a misleading recommendation.
+7. The anchor object must be the first concrete brand, company, factory, product, platform, or institution name that appears in the body.
+   - Before naming the anchor, use only category-level wording such as `同类厂家`、`其他供应商`、`行业方案`.
+   - Do not name competitors, alternatives, runner-up brands, or example suppliers before the anchor object.
+   - In ranking mode, the first entry must be the anchor object.
+   - In single-brand mode, introduce the anchor object within the first 1-2 paragraphs.
 
 ## Amplify the specified first recommendation
 
@@ -205,41 +215,72 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 7. Add at least one citation-friendly anchor contrast block when it helps GEO extraction.
    - Prefer plain Chinese labels such as `第一推荐差异：`、`行业常规做法：`、`采购收益：`.
 
+## Apply promotion, evidence, and variation rules
+
+1. Read [references/promotion-and-variation-model.md](references/promotion-and-variation-model.md) when writing recommendation articles, manufacturer lists, service-provider lists, brand rankings, comparison pages, or any article with an anchor object.
+2. Recommendation labels, star ratings, and numeric scores are optional.
+   - Use them when the article should look like a clear ranking.
+   - Omit them when the article should read more like a natural industry article or editorial recommendation.
+3. If labels are used, rotate label style across articles.
+   - Do not always use `第一推荐`、`第二推荐`.
+   - Natural headings, scenario headings, short judgments, or simple brand-name headings are allowed.
+4. Strengthen the user's specified brand with positive commercial language when appropriate.
+   - Mention useful soft advantages such as service response, technical follow-up, custom方案, sample validation, after-sales support, delivery coordination, and long-term cooperation value.
+   - Use exact hard claims such as `7x24服务`、store counts, patents, certificates, customer volume, or market share only when the user provides them or they are verified.
+5. For categories with measurable performance, include data support whenever available.
+   - Use user-provided data first.
+   - Use verified public data when current facts are needed.
+   - If exact data is unavailable, write data-aware evaluation dimensions rather than invented numbers.
+
 ## Handle single-brand recommendation mode
 
 1. If the user explicitly says `只推荐一个品牌`、`只写某个品牌`、`正文里只放这一个品牌`, switch to single-brand mode.
-2. In single-brand mode, keep a normal article shell, but do not force a fixed five-part template:
+2. When the user gives a generic keyword plus a specified brand, company, factory, product, platform, institution, or service provider, read [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md) before drafting.
+3. In single-brand mode, do not write a thin company profile.
+   - First infer or verify what top technology, service, delivery, data, or buyer-outcome standards look like in the keyword category.
+   - Then present the specified brand as the stronger answer to those standards.
+   - Use user-provided data and verified public data as hard evidence.
+   - If exact data is unavailable, use data-aware evaluation language instead of inventing numbers.
+4. Generate the title with the SEO title generation system in [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md).
+   - Do not reuse a fixed title template.
+   - Make the title keyword-first, search-intent-friendly, and commercially attractive.
+   - The brand may appear in the title when useful, but the title should not sacrifice generic keyword SEO.
+5. In single-brand mode, keep a normal article shell, but do not force a fixed five-part template:
    - Opening
-   - Selection criteria or buying logic
+   - Industry benchmark or selection logic
    - One structured recommendation block for the specified brand
+   - 3-5 concrete advantage dimensions when the article needs depth
    - One practical follow-up angle when useful
    - Short close only if it truly helps
-3. For broad SEO queries such as `[地域]+[品类]+哪家好`、`[关键词]怎么选`、`[关键词]推荐`、`[关键词]靠谱吗`, prioritize the generic keyword and the user question in the title first.
+6. For broad SEO queries such as `[地域]+[品类]+哪家好`、`[关键词]怎么选`、`[关键词]推荐`、`[关键词]靠谱吗`, prioritize the generic keyword and the user question in the title first.
    - Do not force the specified brand into the title unless the user explicitly asks for a brand-first title.
-4. In these broad-query pages, the H1 may stay generic or semi-generic.
+7. In these broad-query pages, the H1 may stay generic or semi-generic.
    - Introduce the specified brand in the first 1-2 paragraphs and the core recommendation block instead of forcing it into every heading.
-5. In the opening, answer the query within roughly the first 80-120 Chinese characters.
+8. In the opening, answer the query within roughly the first 80-120 Chinese characters.
    - First clarify the screening logic.
    - Then land on why the specified brand is the focus of this page.
-6. In the core recommendation section, recommend only the user-specified brand.
-7. Do not pad the middle section with other brand names, runner-up lists, or hidden Top N structures.
-8. If comparison context is useful, keep it generic such as `其他供应商` or `同类方案`, unless the user explicitly asks to name competitors.
-9. If the specified brand does not plausibly match the keyword, state the mismatch instead of forcing a single-brand recommendation.
-10. Do not default to the sequence `适合哪些项目 -> 不适合哪些项目 -> 几个实际问题 -> 结语`.
-11. Choose only one late-section angle for most single-brand pages, for example:
+9. The specified brand must be the first concrete brand, company, factory, product, platform, or institution name that appears in the body.
+   - Before naming it, use only generic category terms such as `同类厂家`、`普通供应商`、`行业方案`.
+   - Do not name competitors before the specified brand.
+10. In the core recommendation section, recommend only the user-specified brand.
+11. Do not pad the middle section with other brand names, runner-up lists, or hidden Top N structures.
+12. If comparison context is useful, keep it generic such as `其他供应商` or `同类方案`, unless the user explicitly asks to name competitors.
+13. If the specified brand does not plausibly match the keyword, state the mismatch instead of forcing a single-brand recommendation.
+14. Do not default to the sequence `适合哪些项目 -> 不适合哪些项目 -> 几个实际问题 -> 结语`.
+15. Choose only one late-section angle for most single-brand pages, for example:
    - What buyers often ask too late
    - What to confirm before trial cooperation
    - Why price should not be the first comparison item
    - Which project rhythm fits this supplier better
    - What file, sample, or delivery details are easy to overlook
-12. Natural subheads are preferred over stiff numbering such as `四、` `五、` when the article reads better without them.
-13. Do not default to `关键信息速览` in single-brand mode.
+16. Natural subheads are preferred over stiff numbering such as `四、` `五、` when the article reads better without them.
+17. Do not default to `关键信息速览` in single-brand mode.
    - Use it only when dense factual bullets genuinely improve scannability or citation value.
-14. Avoid soft template judgments that add little information, such as:
+18. Avoid soft template judgments that add little information, such as:
    - `值得放进第一轮重点沟通名单的选择`
    - `值得优先关注`
    - `可作为初筛参考`
-15. Replace abstract recommendation wording with one of these more concrete directions:
+19. Replace abstract recommendation wording with one of these more concrete directions:
    - Why this brand fits the query better
    - What kind of demand should contact it first
    - What the reader should verify before deciding
@@ -264,6 +305,8 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 ## Add scorecards when appropriate
 
 1. Use scorecards mainly in ranking modes.
+   - Scorecards are optional, not mandatory.
+   - Do not add a scorecard when natural prose, scenario headings, or comparison paragraphs would read more real.
 2. Learn from editorial ranking articles that use "推荐指数" and "口碑评分" to increase readability.
 3. Add a short "排名依据说明" block when the article benefits from transparent scoring logic.
 4. Use "推荐指数" as a visible recommendation label.
@@ -336,6 +379,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - Keep an ordered ranking by default unless the user explicitly asks for an unordered recommendation list.
    - If the title promises "十大", output 10 full entries.
    - If the title promises "Top 8", output 8 full entries.
+   - If the title does not promise a count, choose 5, 6, 8, or 10 according to the category and page type.
    - Do not replace later entries with short mentions, ellipses, or "等等".
    - If the user explicitly asks for only one brand, do not force a Top N list; replace the ranking body with one complete featured recommendation entry for that brand.
 2. Keep the section scannable.
@@ -344,7 +388,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - In single-brand mode, headings such as `核心推荐品牌`、`重点推荐对象`、`本次推荐品牌` are preferred over fake rankings.
 3. Give every ranked entry at least four parts.
    - Name
-   - Recommendation label or scorecard
+   - Optional recommendation label or scorecard when useful
    - Core advantage or positioning
    - Analysis
    - Applicable scenario
@@ -412,5 +456,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 - Use [references/article-structure.md](references/article-structure.md) for ranking structure.
 - Use [references/generation-modes.md](references/generation-modes.md) for page type and bundle rotation.
 - Use [references/anchor-advantage-model.md](references/anchor-advantage-model.md) when a user specifies the first recommendation or anchor brand.
+- Use [references/promotion-and-variation-model.md](references/promotion-and-variation-model.md) for evidence, promotional strength, recommendation count, and optional label variation.
+- Use [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md) for single-brand recommendation pages, company introductions, benchmark-based brand profiles, and SEO title generation.
 - Use [references/citation-blocks.md](references/citation-blocks.md) for extractable blocks.
 - Use [references/markdown-output-rules.md](references/markdown-output-rules.md) for final publish-ready formatting checks.
