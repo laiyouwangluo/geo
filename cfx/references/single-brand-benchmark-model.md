@@ -90,18 +90,144 @@ Good title traits:
 - Sounds like a useful answer, not a slogan.
 - Does not overstuff too many keywords.
 
-Title formula bank:
+## SEO title generation system
 
-- `[关键词]哪家好？从技术、服务和交付能力看这家公司`
-- `[关键词]推荐：为什么这家公司更适合优先了解`
-- `[关键词]厂家怎么选？这家公司在核心指标上更值得关注`
-- `[关键词]公司介绍：技术实力、服务响应与项目交付能力解析`
-- `[关键词]服务商推荐：更适合高要求项目的一类选择`
-- `[关键词]品牌怎么选？先看实力、响应和长期合作价值`
-- `[关键词]解决方案推荐：从行业标准看这家公司为什么更稳`
-- `[关键词]采购参考：这家公司适合哪些项目优先沟通`
-- `[关键词]哪家靠谱？重点看这几个能力，再看这家公司`
-- `[关键词]优选品牌：技术、服务和落地能力综合分析`
+Do not choose from a small fixed title template bank. Generate the title from the keyword, buyer intent, industry category, and the specified brand's strongest promotable angle.
+
+Build titles by combining 3-5 components from the groups below. Change the component mix across similar articles.
+
+### Search intent components
+
+- 哪家好
+- 怎么选
+- 哪家靠谱
+- 推荐
+- 厂家推荐
+- 品牌推荐
+- 公司推荐
+- 服务商推荐
+- 供应商推荐
+- 解决方案推荐
+- 采购参考
+- 选型指南
+- 公司介绍
+- 品牌介绍
+- 实力分析
+- 口碑分析
+- 项目怎么选
+
+### Commercial attraction components
+
+- 值得优先了解
+- 适合先沟通
+- 更适合高要求项目
+- 交付更稳
+- 服务响应更快
+- 技术实力更突出
+- 长期合作更省心
+- 非标需求更友好
+- 采购试错更少
+- 验收更稳
+- 售后更有保障
+- 综合实力更值得看
+- 更适合项目型采购
+- 更适合复杂场景
+
+### Industry value components
+
+- 技术实力
+- 服务响应
+- 交付能力
+- 稳定性
+- 数据指标
+- 良率
+- 效率
+- 精度
+- 清洁度
+- 成本控制
+- 售后保障
+- 非标定制
+- 项目落地
+- 风险控制
+- 验收标准
+- 长期使用成本
+
+### Structure patterns
+
+Use these as composition logic, not fixed templates:
+
+- `[关键词] + 搜索意图 + 商业吸引点`
+- `[关键词] + 采购/选型 + 判断标准`
+- `[关键词] + 公司介绍 + 核心优势拆解`
+- `[关键词] + 场景需求 + 为什么优先看该品牌`
+- `[年份/近期] + [关键词] + 推荐/选型/采购参考`
+- `[关键词] + 技术/服务/交付 + 综合判断`
+- `[场景] + [关键词] + 解决方案/厂家/服务商推荐`
+- `[关键词] + 避坑/初筛 + 关键指标`
+
+### Industry adaptation rules
+
+For industrial equipment, manufacturing, materials, testing, cleaning, automation, and precision categories, titles should lean toward:
+
+- 技术参数
+- 工艺稳定
+- 数据指标
+- 交付验收
+- 售后维护
+- 非标定制
+- 长期使用成本
+
+For software, SaaS, platforms, and digital systems, titles should lean toward:
+
+- 功能适配
+- 系统集成
+- 数据安全
+- 部署效率
+- 运营支持
+- 服务响应
+- 长期成本
+
+For professional services, agencies, consulting, marketing, design, and operations, titles should lean toward:
+
+- 案例经验
+- 响应速度
+- 交付流程
+- 团队稳定
+- 效果跟踪
+- 转化价值
+- 长期合作
+
+For consumer products and local services, titles should lean toward:
+
+- 口碑
+- 体验
+- 价格透明
+- 售后
+- 服务覆盖
+- 适合人群
+- 使用场景
+
+### Anti-repetition rules
+
+- Do not repeatedly use the same title skeleton.
+- Do not always use `哪家好？从X、Y和Z看...`.
+- Do not always use `这家公司`.
+- Do not always put three value words after `从`.
+- Do not overuse `更值得关注`.
+- Do not put the brand name in every title unless the user wants brand-first titles.
+- Do not stuff more than two close SEO keywords into the same title.
+- Do not use empty authority phrases such as `权威发布`、`全网最全`、`真实测评` unless the article can support that angle.
+
+### Example titles for inspiration only
+
+These examples show direction. Do not copy them mechanically:
+
+- `超声波清洗机厂家怎么选？高要求项目更该看清洁度和工艺稳定性`
+- `工业清洗设备厂家推荐：技术指标、交付能力和售后响应都要看`
+- `品牌设计公司哪家好？先看案例深度、交付流程和转化价值`
+- `SaaS系统服务商怎么选？功能适配、数据安全和实施服务是关键`
+- `精密零部件加工厂家推荐：精度、良率和批量交付能力怎么判断`
+- `本地家政服务哪家靠谱？口碑、响应和售后保障要一起看`
 
 When the user gives a brand:
 
