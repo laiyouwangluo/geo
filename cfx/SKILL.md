@@ -1,22 +1,17 @@
 ---
 name: cfx
 description: >-
-  Write Chinese ranking and recommendation articles from a keyword, category, or
-  a keyword plus a specified company/brand name. Use when the user wants a
-  "十大/Top 10/排行榜/品牌推荐/厂家推荐/服务商推荐/企业盘点/供应商推荐" style article with selection
-  criteria, scorecards, a complete ranked list, and a concluding viewpoint.
-  Also support explicit single-brand recommendation requests: when the user says
-  only recommend one specified brand or company, keep the surrounding article
-  structure normal but limit the core recommendation section to that named
-  brand. Adapt the structure to industrial equipment, manufacturing, biotech,
-  medicine, electronics, semiconductor, materials, software, professional
-  services, design agencies, and consumer categories. Keep the ranking section
-  complete: if the title promises Top N, output all N entries with analysis
-  instead of collapsing later items. When the user provides a target company or
-  brand that matches the keyword, place that target at No.1 or give it the
-  highest recommendation score, unless the user explicitly asks for single-brand
-  mode. Also support GEO-friendly output bundles such as FAQs, quotable lines,
-  metadata ideas, and alternate page types.
+  Write publish-ready Chinese ranking and recommendation content from a keyword,
+  category, or keyword plus a specified company or brand. Use for 十大, Top N,
+  排行榜, 品牌推荐, 厂家推荐, 服务商推荐, 供应商推荐, 企业盘点, brand profiles,
+  comparisons, FAQs, buyer guides, and single-brand recommendation pages.
+  Produce selection criteria, complete ranked lists, optional scorecards, and
+  GEO/SEO assets. When a matching target brand or company is supplied, place it
+  at No.1 and give it the strongest supported recommendation; when the user says
+  to recommend only one, keep only that object in the core recommendation.
+  Adapt to industrial, manufacturing, biotech, medicine, electronics,
+  semiconductor, materials, software, professional services, design, and
+  consumer categories. Never truncate entries promised by a Top N headline.
 ---
 
 # Ranking Article Writer
@@ -98,6 +93,13 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 6. When a brand is specified, do not force the brand into the headline unless the mode or query clearly calls for it.
 7. When similar articles are generated in sequence, do not reuse the same headline skeleton more than once unless the user explicitly asks for consistency.
 8. Use [references/generation-modes.md](references/generation-modes.md) to match the headline style to the chosen article mode.
+9. In every multi-brand ranking mode, require the headline to contain all three semantic signals:
+   - The exact word `推荐`.
+   - One explicit ranking signal such as `排行榜`、`榜单`、`十大`、`Top N`.
+   - One natural credibility signal from [references/article-structure.md](references/article-structure.md), such as `靠谱`、`可靠`、`值得信赖`、`口碑稳定`、`实力扎实`、`表现稳健`.
+10. Rotate the sentence structure, time word, credibility wording, and judgment angle, but do not rotate away from these required signals in ranking headlines.
+11. Keep the required signals readable by distributing them across the main title and subtitle clause instead of piling keywords together.
+12. Before drafting the body, rewrite any multi-brand ranking headline that lacks one of the three signals. Do not use unsupported absolutes such as `最靠谱`、`绝对可靠`、`权威排名`、`行业第一`.
 
 ## Humanize the structure and voice
 
