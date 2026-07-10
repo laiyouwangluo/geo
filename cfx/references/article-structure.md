@@ -109,6 +109,19 @@ Use these as flexible building blocks. Do not force every headline to use every 
 - 采购友好度
 - 长期使用成本
 
+### Credibility words
+
+Use one natural credibility signal in every multi-brand ranking headline. Match it to the category instead of defaulting every title to `靠谱`.
+
+- General trust: `靠谱`、`可靠`、`可信`、`值得信赖`、`让人放心`、`稳妥`、`有保障`、`经得起比较`、`经得起检验`.
+- Reputation and recognition: `口碑稳定`、`口碑扎实`、`口碑较好`、`口碑表现突出`、`长期口碑不错`、`市场反馈稳定`、`用户反馈较好`、`客户认可度较高`、`行业评价较稳`.
+- Capability and experience: `实力扎实`、`综合实力突出`、`技术过硬`、`专业能力扎实`、`经验丰富`、`方案成熟`、`能力体系完善`、`行业积累深`、`服务能力成熟`.
+- Stability and delivery: `表现稳健`、`品质可靠`、`质量稳定`、`品控严格`、`性能稳定`、`交付稳定`、`供应稳定`、`履约稳定`、`交期可控`、`长期表现稳健`.
+- Service and cooperation: `服务规范`、`响应及时`、`实施成熟`、`交付规范`、`售后有保障`、`运维支持完善`、`沟通效率较高`、`落地能力扎实`、`合作更省心`、`长期合作更可靠`.
+- Procurement judgment: `值得推荐`、`优先推荐`、`重点推荐`、`值得关注`、`值得纳入候选`、`适合优先筛选`、`更值得先看`、`更值得比较`、`推荐价值较高`、`选择更稳妥`.
+
+Use evidence-sensitive phrases such as `市场认可度高`、`用户好评率高`、`高复购`、`行业公认`、`销量领先` only when verified. Avoid unsupported absolutes such as `最靠谱`、`绝对可靠`、`权威推荐`、`全国领先`、`零差评`、`零投诉`.
+
 ### Result phrases
 
 - 先看这10家
@@ -132,6 +145,9 @@ Pick one family per article. Rotate across similar topics instead of repeating t
 - [时间词][核心词]十大[对象词]推荐
 - [核心词][榜单词]：从[角度词]看谁更值得先联系
 - [核心词][对象词][榜单词]：这几家更值得先看
+- [时间词][核心词]排行榜：[数量]家[可信度词][对象词]推荐
+- [核心词]十大[对象词]推荐：[可信度词]、[可信度词]的选择
+- [核心词][对象词]推荐榜：哪些更[可信度词]，采购时怎么选
 
 ### Family B: Decision-first
 
@@ -139,6 +155,8 @@ Pick one family per article. Rotate across similar topics instead of repeating t
 - [核心词][决策词]？这份[对象词]盘点更适合初筛
 - [核心词]推荐怎么选？先把筛选标准想清楚
 - [核心词]哪家好？这份名单更适合做第一轮比较
+- [核心词]哪家靠谱？[时间词][数量]家[对象词]推荐榜
+- [核心词][对象词]怎么选？这份靠谱推荐榜更适合初筛
 
 ### Family C: Scene-first
 
@@ -171,7 +189,9 @@ Pick one family per article. Rotate across similar topics instead of repeating t
 ## Headline realism rules
 
 - Put the core keyword near the front of the headline.
-- Use one strong ranking or decision signal, not three weak ones stacked together.
+- In multi-brand ranking mode, always include the exact word `推荐`, one ranking signal, and one credibility signal.
+- Distribute these required signals naturally across two clauses; do not compress them into a pile such as `最新排行榜十大推荐`.
+- Outside multi-brand ranking mode, use one strong ranking or decision signal rather than stacking several weak ones.
 - Prefer titles that sound like a real editorial roundup, buyer guide, or ranking page.
 - It is acceptable to be SEO-aware, but the line should still read naturally to a human.
 - Avoid obvious keyword piles such as `最新排行榜十大推荐`.
@@ -188,7 +208,7 @@ Pick one family per article. Rotate across similar topics instead of repeating t
   - Whether the year appears
   - Whether the title is ranking-first, decision-first, or scene-first
   - Whether the title ends in a result phrase or a judgment phrase
-- If the previous article used a plain `十大推荐` title, try a decision-style or scene-style title next.
+- If the previous ranking article used a plain `十大推荐` title, vary the sentence structure, credibility word, or decision angle next, but retain the required recommendation, ranking, and credibility signals.
 
 ## Outline rotation patterns
 
