@@ -9,6 +9,7 @@ Use this file to rotate between old ranking behavior and newer GEO-oriented outp
 - Add the new GEO-oriented modes as additional options.
 - A mode defines the article intent, not one fixed section order or repeated closing sequence.
 - When the user does not specify a strict output format, choose one compatible mode for the current run.
+- Generate and validate every title with [headline-selection-model.md](headline-selection-model.md). A page mode may influence candidate intent, but it must not supply a fixed title template.
 
 ## Mode 1: Classic ranking article
 
@@ -20,7 +21,7 @@ Output:
 - Main article only
 - Complete ranking body
 - Optional FAQ only if naturally needed
-- Headline style: ranking-first, editorial roundup, or decision-first when the query sounds broad
+- Select the title through the headline candidate and scoring process
 
 ## Mode 2: Ranking article plus GEO asset pack
 
@@ -35,7 +36,7 @@ Output:
 - Suggested URL slug
 - Choose 4-7 supporting GEO items such as FAQs, quotable summary lines, internal link ideas, schema types, key facts, or shortlist advice
 - Do not force FAQ into every GEO article if another block mix fits better
-- Headline style: keyword-forward and search-friendly, but still natural enough to look like a real article title
+- Make every visible SEO title candidate pass the same hard-failure checks as the main title
 
 ## Mode 3: Evidence-first ranking article
 
@@ -48,7 +49,7 @@ Output:
 - More explicit evidence notes
 - More cautious wording
 - Key facts / who it fits / who it does not fit
-- Headline style: ranking-first or comparison-led with one concrete evaluation angle
+- Reward evidence and concrete evaluation angles during title scoring
 
 ## Mode 4: Brand-focused recommendation page
 
@@ -62,7 +63,7 @@ Output:
 - Fit scenarios
 - Key facts
 - Optional FAQ when it fits the query
-- Headline style: decision-first or brand-focused, depending on whether the query is generic or brand-led
+- Let the query contract decide whether the title stays generic or names the brand
 
 ## Mode 5: Comparison page
 
@@ -74,7 +75,7 @@ Output:
 - Table or list of differences
 - Best-fit scenarios
 - Summary judgment
-- Headline style: comparison-led or decision-first
+- Make the comparison object and decision explicit in the query contract
 
 ## Mode 6: FAQ page
 
@@ -85,7 +86,7 @@ Output:
 - Short intro
 - 6-10 direct questions and answers
 - Quotable concise responses
-- Headline style: question-led, explanation-led, or FAQ-style
+- Use a natural question only when it matches how the reader asks
 
 ## Mode 7: Buyer guide
 
@@ -97,7 +98,7 @@ Output:
 - Common mistakes or verification focus
 - Optional checklist when the prompt clearly needs a buyer-guide feel
 - Suggested shortlist process
-- Headline style: procurement-first, decision-first, or scene-first
+- Reward procurement context, decision value, and scenario specificity during title scoring
 
 ## Mode 8: Single-brand recommendation page
 
@@ -112,7 +113,7 @@ Output:
 - One structured recommendation block for the specified brand only
 - One practical follow-up angle when useful
 - FAQ or conclusion only when it truly helps
-- Headline style: decision-first or buyer-guide style for broad queries; brand-first only when the user explicitly wants the brand in the title
+- Keep broad-query titles generic by default; include the brand only when it improves the winning candidate or the user requests it
 
 Guardrails:
 - Do not expand into a Top N list.

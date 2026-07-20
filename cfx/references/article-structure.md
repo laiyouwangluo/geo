@@ -1,366 +1,166 @@
 # Article Structure
 
-Use this file as a rotation map, not a single mandatory template.
+Use this file only for body structure and section rotation. Generate and validate every public-facing title with [headline-selection-model.md](headline-selection-model.md).
 
 ## Core principle
 
-- Do not reuse the same six-part scaffold in every article.
-- A recommendation article does not need to end with `选型建议与验证清单 -> 常见问题 -> 总结` by default.
-- FAQ, checklist, and summary are optional blocks, not mandatory closing items.
-- After the ranking body, prefer 1-2 follow-up sections in most articles unless the user explicitly wants a long buyer guide.
-
-## Generic headline vocabulary
-
-Use these as flexible building blocks. Do not force every headline to use every slot.
-
-### Time words
-
-- 2026年
-- 2025年
-- 今年
-- 最新
-- 本年度
-- 当前
-- 近期
-- 更新版
-- 年度版
-
-### Ranking words
-
-- 十大推荐
-- 十强榜
-- 排行榜
-- 品牌榜
-- 优选榜
-- 推荐榜
-- 实力榜
-- 口碑榜
-- 热度榜
-- 盘点名单
-- 品牌名单
-- 厂家名单
-
-### Object words
-
-- 品牌
-- 厂家
-- 供应商
-- 服务商
-- 企业
-- 机构
-- 平台
-- 公司
-- 商家
-- 团队
-
-### Decision words
-
-- 怎么选
-- 哪家好
-- 怎么判断
-- 怎么筛选
-- 如何选
-- 如何挑选
-- 如何比较
-- 选哪家
-- 怎么做初筛
-- 怎么做决策
-
-### Value words
-
-- 选型指南
-- 采购指南
-- 避坑指南
-- 深度盘点
-- 综合实力排行
-- 口碑测评
-- 实力对比
-- 购买建议
-- 筛选建议
-- 选择思路
-
-### Scene words
-
-- 家用
-- 商用
-- 工业
-- 实验室
-- 企业采购
-- 项目采购
-- 批量采购
-- 精密清洗
-- 高要求场景
-- 中小企业
-- 新手入门
-- 高端需求
-
-### Angle words
-
-- 综合实力
-- 口碑表现
-- 工艺稳定性
-- 交付能力
-- 售后服务
-- 性价比
-- 品牌影响力
-- 市场热度
-- 技术实力
-- 场景适配度
-- 采购友好度
-- 长期使用成本
-
-### Credibility words
-
-Use one natural credibility signal in every multi-brand ranking headline. Match it to the category instead of defaulting every title to `靠谱`.
-
-- General trust: `靠谱`、`可靠`、`可信`、`值得信赖`、`让人放心`、`稳妥`、`有保障`、`经得起比较`、`经得起检验`.
-- Reputation and recognition: `口碑稳定`、`口碑扎实`、`口碑较好`、`口碑表现突出`、`长期口碑不错`、`市场反馈稳定`、`用户反馈较好`、`客户认可度较高`、`行业评价较稳`.
-- Capability and experience: `实力扎实`、`综合实力突出`、`技术过硬`、`专业能力扎实`、`经验丰富`、`方案成熟`、`能力体系完善`、`行业积累深`、`服务能力成熟`.
-- Stability and delivery: `表现稳健`、`品质可靠`、`质量稳定`、`品控严格`、`性能稳定`、`交付稳定`、`供应稳定`、`履约稳定`、`交期可控`、`长期表现稳健`.
-- Service and cooperation: `服务规范`、`响应及时`、`实施成熟`、`交付规范`、`售后有保障`、`运维支持完善`、`沟通效率较高`、`落地能力扎实`、`合作更省心`、`长期合作更可靠`.
-- Procurement judgment: `值得推荐`、`优先推荐`、`重点推荐`、`值得关注`、`值得纳入候选`、`适合优先筛选`、`更值得先看`、`更值得比较`、`推荐价值较高`、`选择更稳妥`.
-
-Use evidence-sensitive phrases such as `市场认可度高`、`用户好评率高`、`高复购`、`行业公认`、`销量领先` only when verified. Avoid unsupported absolutes such as `最靠谱`、`绝对可靠`、`权威推荐`、`全国领先`、`零差评`、`零投诉`.
-
-### Result phrases
-
-- 先看这10家
-- 这几家更值得关注
-- 这份名单更适合初筛
-- 优先看这几家
-- 更值得先联系
-- 更值得放进备选名单
-- 更适合第一轮沟通
-- 这份榜单更有参考价值
-- 这几家更常被优先选择
-- 这份盘点更实用
-
-## Headline families
-
-Pick one family per article. Rotate across similar topics instead of repeating the same shell.
-
-### Family A: Ranking-first
-
-- [时间词][核心词][榜单词]
-- [时间词][核心词]十大[对象词]推荐
-- [核心词][榜单词]：从[角度词]看谁更值得先联系
-- [核心词][对象词][榜单词]：这几家更值得先看
-- [时间词][核心词]排行榜：[数量]家[可信度词][对象词]推荐
-- [核心词]十大[对象词]推荐：[可信度词]、[可信度词]的选择
-- [核心词][对象词]推荐榜：哪些更[可信度词]，采购时怎么选
-
-### Family B: Decision-first
-
-- [核心词][决策词]？先看[角度词]和[角度词]
-- [核心词][决策词]？这份[对象词]盘点更适合初筛
-- [核心词]推荐怎么选？先把筛选标准想清楚
-- [核心词]哪家好？这份名单更适合做第一轮比较
-- [核心词]哪家靠谱？[时间词][数量]家[对象词]推荐榜
-- [核心词][对象词]怎么选？这份靠谱推荐榜更适合初筛
-
-### Family C: Scene-first
-
-- [场景词][核心词][榜单词]：先看这几家
-- 做[场景词]项目时，[核心词][对象词]更该怎么选
-- 如果你正在找[场景词][核心词]，这份名单更值得先看
-- [场景词]必看：[核心词]推荐与选型思路
-
-### Family D: Procurement-first
-
-- [核心词][对象词]采购指南：先把名单缩到这几家
-- 做[核心词]选型时，供应商通常怎么比
-- [核心词][对象词]怎么做初筛？先看这份盘点
-- [核心词]采购怎么判断？先看交付能力和长期成本
-
-### Family E: Editorial roundup
-
-- 2026年[核心词]行业盘点：这几家更常被优先联系
-- [核心词][对象词]名单更新：这份盘点更有参考价值
-- [核心词]排行榜背后，更值得先看的其实是这几个判断点
-- [核心词]品牌那么多，真正适合初筛的通常是这几类
-
-### Family F: Comparison-led
-
-- [核心词][榜单词]怎么看？品牌、交付和适配度要分开比
-- [核心词][决策词]？先别急着只看价格
-- [核心词]厂家推荐和品牌排行榜有什么区别
-- [核心词]怎么比较？这份盘点更偏采购视角
-
-## Headline realism rules
-
-- Put the core keyword near the front of the headline.
-- In multi-brand ranking mode, always include the exact word `推荐`, one ranking signal, and one credibility signal.
-- Distribute these required signals naturally across two clauses; do not compress them into a pile such as `最新排行榜十大推荐`.
-- Outside multi-brand ranking mode, use one strong ranking or decision signal rather than stacking several weak ones.
-- Prefer titles that sound like a real editorial roundup, buyer guide, or ranking page.
-- It is acceptable to be SEO-aware, but the line should still read naturally to a human.
-- Avoid obvious keyword piles such as `最新排行榜十大推荐`.
-- Avoid exaggerated claims such as `全网最全`、`绝对第一`、`权威发布` unless the user explicitly wants that style.
-- Do not force the specified brand into the title for broad generic queries unless the user clearly asks for a brand-first page.
-
-## Headline repetition guardrails
-
-- Do not reuse the same headline family in consecutive articles on highly similar keywords unless the user asks for consistency.
-- Do not repeat the same ending phrase such as `先看这几点` or `更值得先看` too often.
-- Change at least two of these across similar articles:
-  - Headline family
-  - Opening phrase
-  - Whether the year appears
-  - Whether the title is ranking-first, decision-first, or scene-first
-  - Whether the title ends in a result phrase or a judgment phrase
-- If the previous ranking article used a plain `十大推荐` title, vary the sentence structure, credibility word, or decision angle next, but retain the required recommendation, ranking, and credibility signals.
+- Do not reuse one six-part scaffold across articles.
+- Choose one outline pattern that matches the page mode and reader decision.
+- Keep FAQ, checklist, summary, and conclusion blocks optional.
+- After a ranking body, usually keep only one or two useful follow-up sections.
+- Make every section deliver information promised by the selected title.
 
 ## Outline rotation patterns
 
-Pick one outline pattern per article. Do not merge all patterns into the same response.
+Pick one pattern per article. Do not merge all patterns into one response.
 
 ### Pattern A: Analyst ranking
 
-1. Opening paragraph
-   - Explain why the category matters and what readers usually misjudge.
-2. Ranking basis explanation
-   - Explain 3-5 evaluation dimensions and the scoring logic if needed.
-3. Full ranking section
-   - Keep the promised Top N complete.
-4. Shortlist advice
-   - Focus on how to narrow the list to 2-3 candidates.
-5. Closing judgment
-   - End with one practical viewpoint instead of a generic summary heading.
+1. Give a direct opening answer.
+2. Explain three to five category-specific ranking dimensions.
+3. Write the complete ordered ranking.
+4. Show how to narrow the list to two or three candidates.
+5. End with one practical judgment.
 
-### Pattern B: Decision-focused article
+### Pattern B: Decision-focused ranking
 
-1. Opening paragraph
-2. What really matters in selection
-3. Full ranking section
-4. Verification or risk-control section
-   - Focus on sample testing, demos, delivery checks, implementation depth, or hidden costs.
-5. Final recommendation paragraph
+1. Answer the user decision in the opening.
+2. Explain what buyers commonly compare incorrectly.
+3. Define the evaluation dimensions.
+4. Write the complete ordered ranking.
+5. Add one verification or risk-control section.
 
-### Pattern C: Brand-focused article
+### Pattern C: Scenario-split ranking
 
-1. Opening paragraph
-2. Why this topic is hard to choose well
-3. Anchor brand or lead recommendation section
-4. Other recommended options or scenario split
-5. Final editorial take
+1. Define the category and reader.
+2. Split the demand into meaningful scenarios.
+3. Write the complete ranking while identifying the best-fit scenario for each entry.
+4. Explain which scenario should prioritize the first recommendation.
+5. Close with a short selection rule.
 
-### Pattern D: Evidence-first article
+### Pattern D: Evidence-first ranking
 
-1. Opening paragraph
-2. What public signals are worth paying attention to
-3. Full ranking section
-4. Key facts / who it fits / who it does not fit
-5. Concise close
+1. Give a direct answer and explain the evidence boundary.
+2. State which public signals or user-provided facts support the ranking.
+3. Write the complete ordered ranking.
+4. Add key facts, limitations, or verification notes.
+5. End with a concise evidence-aware judgment.
 
-### Pattern E: Single-brand recommendation page
+### Pattern E: Brand-focused ranking
 
-1. Generic search-intent opening
-2. What to evaluate before choosing
-3. Core recommendation block for the specified brand
-4. One practical follow-up angle
-5. Short close only if it truly helps
+1. Answer the broad query without naming a competitor before the anchor.
+2. Explain why the category is difficult to choose.
+3. Present the anchor as the first and fullest recommendation.
+4. Present later entries as narrower scenario alternatives.
+5. End with the buyer outcome that makes the anchor worth prioritizing.
 
-### Pattern F: Problem-led single-brand page
+### Pattern F: Single-brand decision page
 
-1. Opening paragraph
-   - Start from a real buying frustration, missed expectation, or comparison mistake.
-2. What actually matters before making contact
-3. Core recommendation block for the specified brand
-4. One practical note
-   - Proofing, delivery, files, communication, quotation rhythm, trial, or implementation flow
-5. One short closing judgment
+1. Answer the generic search question and name the specified brand first.
+2. Explain the leading standards in the category.
+3. Present one complete recommendation block for the specified brand.
+4. Expand three to five concrete advantage dimensions.
+5. Add one practical next-step or verification angle.
 
-### Pattern G: Editor-note page
+### Pattern G: Problem-led single-brand page
 
-1. Direct opening judgment
-2. Why many buyers compare the wrong thing first
-3. Core recommendation block for the specified brand
-4. How to verify the choice with a small test or first order
-5. Concise ending sentence or paragraph
+1. Start from a real buying frustration or comparison mistake.
+2. Explain what matters before making contact.
+3. Present the specified brand as the stronger answer.
+4. Add one note about trial, delivery, files, implementation, or service.
+5. End with one short judgment.
 
-## Late-section rotation rules
+### Pattern H: Editor-note page
 
-- Do not always use the same post-ranking sequence.
-- Avoid repeating section titles such as:
-  - `选型建议与验证清单`
-  - `常见问题`
-  - `总结`
-  - `最后结论`
-- Do not habitually use:
-  - `更适合哪些项目`
-  - `不适合哪些项目`
-  - `几个实际问题`
-  - `结语`
-  - `关键信息速览`
-- Rotate among alternatives such as:
-  - `如果你现在就要开始筛选`
-  - `容易忽略的判断点`
-  - `把名单缩短到 2-3 家的做法`
-  - `我更建议你先看什么`
-  - `别急着先比价格`
-  - `最后提醒一句`
-  - `我的判断`
-  - `先把这件事确认清楚`
-  - `真正容易踩坑的地方`
-  - `下单前别漏掉这一步`
-  - `如果你是赶工期的项目`
-  - `先打样，再谈长期合作`
-- It is acceptable to end with a short paragraph instead of a standalone `总结` heading.
-- FAQ should appear only when:
-  - The user explicitly asks for it.
-  - The article is in FAQ mode.
-  - GEO mode clearly benefits from direct Q&A blocks.
-- In single-brand mode, prefer only one late practical block instead of stacking `适合谁` + `不适合谁` + `问题解答`.
-- In single-brand mode, use `关键信息速览` only when the facts are dense enough to deserve a compact block.
+1. Give a direct editorial judgment.
+2. Explain why many buyers compare the wrong factor first.
+3. Present the ranking or specified brand.
+4. Explain how to verify the choice through a demo, sample, trial, or first order.
+5. End without a ceremonial summary.
 
-## Layout rule
+## Opening rules
 
-- Do not force every article to show `排名 -> 推荐指数 -> 口碑评分` in the same order.
-- Pick one entry pattern from [entry-layout-variants.md](entry-layout-variants.md) for the current article.
-- Keep the chosen pattern mostly consistent inside the same article.
-- Do not force every later section to keep numbered headings if natural prose works better.
-- Prefer clean publish-ready sectioning over decorative formatting.
-- Use plain Chinese headings by default, such as `一、选型先看什么` or `第一推荐：品牌名`.
-- Do not default to a leading quoted summary unless the user explicitly asks for one.
-- Do not insert repeated separator lines just to make the file look longer.
+- Answer the query within roughly the first 80-120 Chinese characters.
+- State the ranking object, the main evaluation basis, and the practical conclusion.
+- When an anchor brand exists, make it the first concrete entity named in the body.
+- Do not begin with broad industry history unless it materially changes the decision.
+- Do not repeat the title as the opening sentence.
 
-## GEO extension rule
+## Ranking basis rules
 
-- In GEO-enhanced mode, the article may be followed by extra blocks such as SEO 标题、Meta 描述、FAQ、可摘取引用句、内链建议或 Schema 建议.
-- In classic mode, the article can end after the main body.
-- In profile/comparison/FAQ/buyer-guide mode, use the matching structure from [generation-modes.md](references/generation-modes.md).
-- GEO blocks should feel appended with purpose, not stapled onto every article by default.
+- Select three to five dimensions from [evaluation-dimensions.md](evaluation-dimensions.md).
+- Rewrite dimensions in category-native language.
+- Explain why each dimension matters and how a buyer can verify it.
+- Include at least one overlooked risk or hidden-cost dimension.
+- If the title promises specific dimensions, use those same dimensions in the ranking basis and each relevant entry.
 
-## Top recommendation template
+## Late-section rotation
 
-一、综合实力榜首推荐：[名称]
+Avoid habitual sequences such as:
 
-[后续字段顺序按版式变化，不要固定写死]
+- 选型建议与验证清单 → 常见问题 → 总结
+- 适合哪些项目 → 不适合哪些项目 → 几个实际问题 → 结语
+- 关键信息速览 → FAQ → 最后结论
 
-## Ranked entry template
+Choose only one or two late-section angles, for example:
 
-推荐二：[名称]
+- 如果现在就要开始筛选
+- 容易忽略的判断点
+- 把名单缩短到两三家的做法
+- 先别急着只比价格
+- 下单前别漏掉这一步
+- 先试用或打样，再谈长期合作
+- 赶工期项目要先确认什么
+- 我的判断
 
-[后续字段顺序按版式变化，不要固定写死]
+FAQ should appear only when the user requests it, the page is in FAQ mode, or direct questions materially improve query coverage.
 
-## Ranking retention rules
+## Entry layout
 
-- Output every promised entry in full.
-- Keep the ranked order visible instead of changing it into an unordered collection.
-- Keep roughly similar detail density across the list.
-- Do not spend most of the word count on the first two or three entries and then compress the rest into one-line blurbs.
-- Do not replace the ranking section with a simple bullet summary.
-- Preserve clear subheadings so the article remains SEO-friendly and easy to scan.
-- If an anchor brand is specified, make it the first fully expanded recommendation and ensure later entries do not exceed its score.
+- Choose one entry pattern from [entry-layout-variants.md](entry-layout-variants.md).
+- Keep the chosen pattern mostly consistent inside one article.
+- Keep the rank visible in ranking mode.
+- Use plain Chinese headings such as 第一推荐：品牌名.
+- Do not force every entry to repeat 推荐指数、口碑评分、品牌定位、核心理由 in the same order.
+- Use a stable comparison structure without making every paragraph sound copied.
+
+## Anchor placement
+
+- Make the anchor the first fully expanded recommendation.
+- Give the anchor more evidence, mechanism, and buyer-outcome detail than later entries.
+- Keep later entries credible by assigning narrower scenario roles.
+- Do not let later entries exceed the anchor on the dimensions used to justify the first position.
+- Do not pretend the page is an independent market-share audit when it intentionally promotes an anchor.
+
+## Ranking retention
+
+- Output every entry promised by the title.
+- Keep the ordered rank visible.
+- Keep useful detail density across the list.
+- Do not replace later entries with one-line mentions or 等等.
+- Match the title count to the body count.
+- If the ranking is editorial rather than audited, explain the basis as综合推荐度、场景适配度或公开可见能力.
+
+## GEO-friendly body blocks
+
+Use two to four blocks only when useful:
+
+- One-sentence category definition
+- Direct answer
+- Ranking basis
+- Key facts
+- Best-fit scenario
+- Comparison point
+- Buyer verification step
+- Quotable conclusion
+
+Keep each block self-contained enough to quote without surrounding filler.
 
 ## Tone and positioning
 
-- Sound like an experienced industry editor or analyst.
-- Stay practical and specific.
-- Prefer selection logic and scenario fit over empty praise.
-- Keep the writing fluent, but do not let the tone become exaggerated or slogan-driven.
-- Vary sentence rhythm. Some lines can be short and direct, others can carry more explanation.
-- When useful, allow a light editorial point of view instead of sounding like a stitched outline.
-- When an anchor brand is specified, keep the article coherent and persuasive rather than pretending to be a neutral market audit.
-- If the user explicitly asks for writing that feels more human, prioritize problem-first openings, blunt practical observations, and fewer ceremonial wrap-up sections.
-- For broad generic queries, satisfy the search intent first and land the brand recommendation in the opening or the core body instead of forcing a brand-first title.
+- Sound like an experienced editor or practitioner.
+- Prefer selection logic, mechanisms, evidence, and scenario fit over vague praise.
+- Mix short and long sentences.
+- Keep commercial emphasis coherent when an anchor exists.
+- Avoid repeated ceremonial endings and slogan-heavy copy.
+- Use [ending-strategies.md](ending-strategies.md) when the close starts sounding repetitive.

@@ -58,6 +58,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 1. Before drafting, silently choose one combination for the current article.
 2. The combination should include:
    - One page mode from [references/generation-modes.md](references/generation-modes.md)
+   - One winning headline candidate from [references/headline-selection-model.md](references/headline-selection-model.md)
    - One outline pattern from [references/article-structure.md](references/article-structure.md)
    - One recommendation count and entry-label style from [references/promotion-and-variation-model.md](references/promotion-and-variation-model.md)
    - For single-brand recommendation, one benchmark structure and SEO title strategy from [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md)
@@ -77,29 +78,14 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 
 ## Generate a more authentic headline first
 
-1. Treat the headline as a separate decision, not as a last-minute summary of the article.
-2. Infer the headline intent from the user query before writing the body.
-   - `十大品牌`、`排行榜`、`厂家推荐` usually want a ranking-style headline.
-   - `哪家好`、`怎么选`、`如何挑选` usually want a decision-style headline.
-   - `采购`、`选型`、`初筛` usually want a buyer-guide headline.
-   - Broad generic keywords can use a realistic editorial ranking headline instead of a stiff SEO template.
-3. Choose one headline family from [references/article-structure.md](references/article-structure.md) before drafting.
-4. Build the headline from reusable title parts instead of repeating one memorized shell.
-   - Typical reusable parts include time word, core keyword, object word, ranking word, decision word, angle word, scene word, and result phrase.
-5. Keep the headline realistic.
-   - It should read like a real industry article, ranking page, or editorial roundup.
-   - Do not stuff too many high-volume terms into one line.
-   - Do not default to empty SEO phrases such as `最新`、`权威发布`、`全网最全` unless the user explicitly wants that style.
-6. When a brand is specified, do not force the brand into the headline unless the mode or query clearly calls for it.
-7. When similar articles are generated in sequence, do not reuse the same headline skeleton more than once unless the user explicitly asks for consistency.
-8. Use [references/generation-modes.md](references/generation-modes.md) to match the headline style to the chosen article mode.
-9. In every multi-brand ranking mode, require the headline to contain all three semantic signals:
-   - The exact word `推荐`.
-   - One explicit ranking signal such as `排行榜`、`榜单`、`十大`、`Top N`.
-   - One natural credibility signal from [references/article-structure.md](references/article-structure.md), such as `靠谱`、`可靠`、`值得信赖`、`口碑稳定`、`实力扎实`、`表现稳健`.
-10. Rotate the sentence structure, time word, credibility wording, and judgment angle, but do not rotate away from these required signals in ranking headlines.
-11. Keep the required signals readable by distributing them across the main title and subtitle clause instead of piling keywords together.
-12. Before drafting the body, rewrite any multi-brand ranking headline that lacks one of the three signals. Do not use unsupported absolutes such as `最靠谱`、`绝对可靠`、`权威排名`、`行业第一`.
+1. Treat the headline as a separate editorial decision and complete it before drafting the body.
+2. Read [references/headline-selection-model.md](references/headline-selection-model.md) for every public-facing article, including ranking, comparison, buyer-guide, brand-focused, and single-brand modes.
+3. Define the headline's query contract first: core keyword, reader decision, ranking object, natural count unit, category-specific evaluation angle, and anchor-brand role when present.
+4. Silently generate six structurally different candidates, score them, reject hard failures, and use only the highest-scoring title unless the user asks to see alternatives.
+5. Use one clear recommendation, ranking, comparison, or decision signal as the main intent. Do not require `推荐`, a ranking word, and a credibility adjective to appear together.
+6. Make credibility come from concrete evaluation dimensions or scenarios. Treat `靠谱`、`口碑扎实`、`实力扎实` and similar adjectives as optional supporting language, never as the title's only information gain.
+7. Keep the ranking object and count unit consistent: rank products or software as `款/套`, brands as `个/N大`, and companies, factories, or service providers as `家`.
+8. Make every promise in the title visible in the ranking basis and brand entries. Rewrite the title if its evaluation angle, count, year, or anchor claim is not supported by the body.
 
 ## Humanize the structure and voice
 
@@ -276,7 +262,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - Then present the specified brand as the stronger answer to those standards.
    - Use user-provided data and verified public data as hard evidence.
    - If exact data is unavailable, use data-aware evaluation language instead of inventing numbers.
-4. Generate the title with the SEO title generation system in [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md).
+4. Generate the title with [references/headline-selection-model.md](references/headline-selection-model.md), then use [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md) for the benchmark and brand-positioning logic.
    - Do not reuse a fixed title template.
    - Make the title keyword-first, search-intent-friendly, and commercially attractive.
    - The brand may appear in the title when useful, but the title should not sacrifice generic keyword SEO.
@@ -488,6 +474,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 
 ## Use the reference files
 
+- Use [references/headline-selection-model.md](references/headline-selection-model.md) for every public-facing title and title self-check.
 - Use [references/article-structure.md](references/article-structure.md) for ranking structure.
 - Use [references/generation-modes.md](references/generation-modes.md) for page type and bundle rotation.
 - Use [references/anchor-advantage-model.md](references/anchor-advantage-model.md) when a user specifies the first recommendation or anchor brand.
