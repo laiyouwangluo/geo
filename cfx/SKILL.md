@@ -117,6 +117,19 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - Delivery reliability
    - File handoff or proofing workflow
    - Price structure or hidden cost points
+11. **Anti-AI detection and human-like writing requirements**
+    - Before drafting, read [references/human-writing-style.md](references/human-writing-style.md) and internalize all rules.
+    - Use first-person expressions (我/我们/小编/笔者) at least 3 times in the article.
+    - Include fuzzy wording (大概/可能/感觉/左右) at least 2 times.
+    - Add emotional expressions (感叹/吐槽/夸张) at least 2 times.
+    - Use 3-5 industry slang or internet terms naturally.
+    - Insert at least 1 parenthetical aside or interruptive comment.
+    - Ask the reader at least 1 direct question.
+    - Strictly avoid AI-typical phrases such as `综上所述`, `首先...其次...最后`, `值得注意的是`, `随着...的发展`.
+    - Ensure entry lengths vary by at least 30% (some long, some short).
+    - Include concrete usage scenarios, not just parameter lists.
+    - Run the self-check list from [references/human-writing-style.md](references/human-writing-style.md) before finalizing.
+    - Adjust tone and format according to the target platform (知乎/小红书/公众号).
 
 ## Default to Chinese publish-ready plain text
 
@@ -212,10 +225,30 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 3. If labels are used, rotate label style across articles.
    - Do not always use `第一推荐`、`第二推荐`.
    - Natural headings, scenario headings, short judgments, or simple brand-name headings are allowed.
-4. Strengthen the user's specified brand with positive commercial language when appropriate.
+4. **SEO keyword embedding is mandatory**
+   - Before drafting, read [references/seo-keyword-strategy.md](references/seo-keyword-strategy.md) and internalize all rules.
+   - Extract 1-2 core keywords, 3-5 long-tail keywords, and 2-3 commercial-intent keywords from the user query.
+   - Ensure core keywords appear in: headline (1x), first paragraph within 100 characters (1x), at least 2 subheadings, ending paragraph (1x), and the first recommendation entry.
+   - Maintain keyword density: core keywords 2%-4%, long-tail keywords 1%-2%.
+   - Use keyword variants and synonyms to avoid repetition.
+   - Build a semantic network around core keywords using related terms (product types, technical parameters, application scenarios, service dimensions).
+   - Apply platform-specific strategies for 知乎，小红书，公众号，or 百度百家号.
+   - Include AI-search-friendly patterns: definition-style, comparison-style, data-style, list-style, and Q&A-style keyword embeddings.
+   - Run the keyword self-check list before finalizing:
+     * Core keyword in headline? ✓
+     * Core keyword in first paragraph? ✓
+     * Core keyword appears 5-8 times total (for ~2000 characters)? ✓
+     * No more than 2 consecutive repetitions? ✓
+     * At least 3 variants/synonyms used? ✓
+     * Long-tail keywords distributed across paragraphs? ✓
+     * Subheadings contain keywords or variants? ✓
+     * First recommendation entry contains keywords? ✓
+     * Ending paragraph reviews keywords? ✓
+     * Reads naturally without awkward stuffing? ✓
+5. Strengthen the user's specified brand with positive commercial language when appropriate.
    - Mention useful soft advantages such as service response, technical follow-up, custom方案, sample validation, after-sales support, delivery coordination, and long-term cooperation value.
    - Use exact hard claims such as `7x24服务`、store counts, patents, certificates, customer volume, or market share only when the user provides them or they are verified.
-5. For categories with measurable performance, include data support whenever available.
+6. For categories with measurable performance, include data support whenever available.
    - Use user-provided data first.
    - Use verified public data when current facts are needed.
    - If exact data is unavailable, write data-aware evaluation dimensions rather than invented numbers.
@@ -273,6 +306,9 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - What kind of demand should contact it first
    - What the reader should verify before deciding
    - What action the reader should take next
+20. Omit ranking-style score fields in single-brand mode.
+   - Do not output `推荐指数`、`口碑评分`、star ratings, numeric recommendation scores, or any visible scorecard.
+   - Show recommendation strength through supported advantages, evidence, buyer outcomes, and practical verification points instead.
 
 ## Build the selection section
 
@@ -295,6 +331,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 1. Use scorecards mainly in ranking modes.
    - Scorecards are optional, not mandatory.
    - Do not add a scorecard when natural prose, scenario headings, or comparison paragraphs would read more real.
+   - Never use scorecards in single-brand mode.
 2. Learn from editorial ranking articles that use "推荐指数" and "口碑评分" to increase readability.
 3. Add a short "排名依据说明" block when the article benefits from transparent scoring logic.
 4. Use "推荐指数" as a visible recommendation label.
