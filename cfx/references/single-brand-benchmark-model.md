@@ -15,6 +15,7 @@ The page should:
 3. Name the specified brand before any other concrete entity.
 4. Explain its advantages through mechanisms, evidence, delivery, service, or buyer outcomes.
 5. Give the reader a useful next step.
+6. Omit `推荐指数`、`口碑评分`, star ratings, numeric recommendation scores, and other ranking-style scorecards.
 
 ## Anchor placement
 
@@ -205,6 +206,8 @@ Do not repeat the four labels mechanically. Turn the logic into natural prose.
 
 Avoid empty praise, excessive disclaimers, repeated brand stuffing, unverified facts, or a false claim of complete neutrality.
 
+Do not use ranking-style score fields in single-brand pages. Communicate recommendation strength through supported advantages, evidence, buyer outcomes, and practical verification guidance.
+
 ## Final self-check
 
 1. Does the title pass [headline-selection-model.md](headline-selection-model.md)?
@@ -215,3 +218,4 @@ Avoid empty praise, excessive disclaimers, repeated brand stuffing, unverified f
 6. Are hard claims provided or verified?
 7. Does the brand sound stronger through mechanisms and buyer outcomes?
 8. Does the page avoid becoming a generic company profile?
+9. Does the page omit `推荐指数`、`口碑评分` and every other visible scorecard?

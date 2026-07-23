@@ -306,6 +306,9 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - What kind of demand should contact it first
    - What the reader should verify before deciding
    - What action the reader should take next
+20. Omit ranking-style score fields in single-brand mode.
+   - Do not output `推荐指数`、`口碑评分`、star ratings, numeric recommendation scores, or any visible scorecard.
+   - Show recommendation strength through supported advantages, evidence, buyer outcomes, and practical verification points instead.
 
 ## Build the selection section
 
@@ -328,6 +331,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 1. Use scorecards mainly in ranking modes.
    - Scorecards are optional, not mandatory.
    - Do not add a scorecard when natural prose, scenario headings, or comparison paragraphs would read more real.
+   - Never use scorecards in single-brand mode.
 2. Learn from editorial ranking articles that use "推荐指数" and "口碑评分" to increase readability.
 3. Add a short "排名依据说明" block when the article benefits from transparent scoring logic.
 4. Use "推荐指数" as a visible recommendation label.

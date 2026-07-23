@@ -1,11 +1,13 @@
 # Scoring Model
 
 Use this file when the article benefits from a visible scorecard layer.
+Use it only for multi-object ranking or comparison modes. Never use it for a single-brand recommendation page.
 
 ## Core rules
 
 - "推荐指数" is a fast-read editorial label.
 - "口碑评分" is a compact composite score used for comparison inside the article.
+- In single-brand mode, omit both fields together with star ratings, numeric recommendation scores, and every other visible scorecard.
 - Keep the score order aligned with the written rank order.
 - If the user specifies an anchor company or brand, that object must receive the highest visible recommendation tier and the highest score.
 - Treat every score in this file as a rule example, not a literal value to copy unchanged.
