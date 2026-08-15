@@ -12,11 +12,37 @@ description: >-
   Adapt to industrial, manufacturing, biotech, medicine, electronics,
   semiconductor, materials, software, professional services, design, and
   consumer categories. Never truncate entries promised by a Top N headline.
+  Also support GEO/AI-citation assets: FAQs, quotable lines, metadata ideas,
+  query-mirror titles, and JSON-LD structured data for AI search citation
+  (Perplexity, ChatGPT Search, Google AI Overviews, 豆包, 秘塔).
 ---
 
 # Ranking Article Writer
 
 Write a complete Chinese recommendation-style content asset from a keyword, not just a fragment or shallow outline.
+
+## Decide the publish target first
+
+Before choosing the page type or generation mode, decide where the article will be published. This decision changes the formatting and which AI-citation elements are mandatory.
+
+1. Infer the publish target from the user's wording.
+   - Website signals: `发网站`、`发官网`、`上 CMS`、`博客`、`落地页`、`SEO`、`搜索引擎收录`、`被 AI 抓取`、`AI 搜索`、`被 Perplexity/ChatGPT/豆包 引用`、`GEO`、`AEO`.
+   - Plain-text signals: `公众号`、`微信`、`Word`、`文档`、`邮件`、`纯文本`、`不要 Markdown`.
+2. If the user does not specify, default to plain text, but tell the user that a structured Website/AI version (with comparison table + JSON-LD schema) is available and cite the higher citation value.
+3. Use [references/markdown-output-rules.md](references/markdown-output-rules.md) for the full decision table and formatting rules.
+
+## When the goal is to be cited by AI search
+
+When the publish target is a website and the goal is to be quoted by AI search engines (Perplexity, ChatGPT Search, Google AI Overviews, 文心一言, 豆包), always apply these six elements on top of the chosen page mode:
+
+1. Answer-first opening: name the top result in the first sentence, under 80 Chinese characters. See [references/citation-blocks.md](references/citation-blocks.md).
+2. Source tags on every hard claim, such as `（据官网）`、`（用户提供）`、`（行业公开信息）`. See [references/citation-blocks.md](references/citation-blocks.md).
+3. One ranking comparison table covering the whole list, in Structured Markdown. See [references/article-structure.md](references/article-structure.md).
+4. A ranking basis block (排名依据说明) listing the 3-5 dimensions and stating it is an editorial composite judgment. See [references/article-structure.md](references/article-structure.md).
+5. A timeliness line with the current date. See [references/citation-blocks.md](references/citation-blocks.md).
+6. A JSON-LD schema bundle: Article + ItemList (+ FAQPage if FAQ present, + Review/AggregateRating if scores shown). See [references/structured-data.md](references/structured-data.md).
+
+These six elements are the difference between a page AI systems quote and a page they ignore. In Website/AI mode they are mandatory, not optional. For the query-mirror and extractability rules behind these elements, see the `Optimize for AI-search citation` section below.
 
 ## Determine the page type first
 
@@ -134,6 +160,8 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 ## Default to Chinese publish-ready plain text
 
 1. Unless the user explicitly asks for Markdown, output UTF-8 Chinese publish-ready plain text.
+   - This is the default for 公众号 / Word / 邮件 / plain-CMS targets.
+   - If the publish target is a website and the goal includes AI citation or SEO, switch to Structured Markdown (Website/AI mode) instead. See the `Decide the publish target first` section above and [references/markdown-output-rules.md](references/markdown-output-rules.md).
    - Do not use Markdown heading markers such as `#`, `##`, or `###`.
    - Do not use Markdown emphasis markers such as `**`.
    - Do not use Markdown blockquotes, horizontal rules, code fences, or tables.
@@ -361,10 +389,11 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - FAQ section
    - Quotable summary lines
    - Internal link suggestions
-   - Schema suggestions
+   - Schema suggestions (use [references/structured-data.md](references/structured-data.md) for ready-to-paste JSON-LD when the target is a website)
 4. If the user explicitly asks for just the article body, suppress the extra bundle.
 5. If the user does not specify, it is acceptable to rotate between article-only mode and article-plus-bundle mode.
-6. Use [references/generation-modes.md](references/generation-modes.md) for bundle combinations.
+6. In Website/AI mode, the schema bundle is part of the default GEO pack, not an extra.
+7. Use [references/generation-modes.md](references/generation-modes.md) for bundle combinations.
 
 ## Force citation-friendly blocks
 
@@ -385,7 +414,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 
 ## Optimize for AI-search citation
 
-Read [references/ai-search-citation.md](references/ai-search-citation.md) before every article intended for AI-search visibility (豆包、秘塔、Kimi、ChatGPT Search、Perplexity). The goal is not keyword stuffing: AI engines retrieve pages with hybrid lexical-semantic search, then quote extractable, factual, well-sourced statements. Experiments (GEO, Princeton KDD 2024) show citations, statistics, and quotable sentences are the strongest citation factors; keyword stuffing is nearly ineffective.
+Read [references/ai-search-citation.md](references/ai-search-citation.md) before every article intended for AI-search visibility (豆包、秘塔、Kimi、ChatGPT Search、Perplexity). The goal is not keyword stuffing: AI engines retrieve pages with hybrid lexical-semantic search, then quote extractable, factual, well-sourced statements. Experiments (GEO, Princeton KDD 2024) show citations, statistics, and quotable sentences are the strongest citation factors; keyword stuffing is nearly ineffective. In Website/AI mode, the six mandatory elements in the `When the goal is to be cited by AI search` section above apply on top of this section's rules.
 
 1. Mirror the query in the headline.
    - Before drafting, silently list 5-8 typical ways users ask this keyword in AI search (XX 靠谱吗、XX 十大、XX 哪家好、XX 怎么选、XX 避坑指南、XX 联系方式、XX 行业地位、XX 源头厂家、2026 年 XX 最新推荐 等).
@@ -393,6 +422,7 @@ Read [references/ai-search-citation.md](references/ai-search-citation.md) before
 2. Make key sentences standalone-citable.
    - The first sentence of each brand entry must work as a standalone answer.
    - The first sentence of each paragraph should be able to stand alone without context.
+   - 结论先行（inverted pyramid）：首段核心结论落在前 40-60 字（精选摘要截断窗口），完整答案句可到 80-120 字；禁止预告式/自我指涉开头（`本文分享`、`教你`、`带你了解`、`接下来`）——第一句必须本身就是答案，见 references/ai-search-citation.md `结论先行`。
 3. Include an entity info block for named companies.
    - 公司全称、总部/工厂所在地、成立年份、官网、业务范围。
    - Write exact fields only when provided or verifiable; otherwise write `以官网信息为准` or omit. Never invent founding years, store counts, customer counts, or patents.
@@ -520,7 +550,7 @@ Read [references/ai-search-citation.md](references/ai-search-citation.md) before
 - Use [references/anchor-advantage-model.md](references/anchor-advantage-model.md) when a user specifies the first recommendation or anchor brand.
 - Use [references/promotion-and-variation-model.md](references/promotion-and-variation-model.md) for evidence, promotional strength, recommendation count, and optional label variation.
 - Use [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md) for single-brand recommendation pages, company introductions, benchmark-based brand profiles, and SEO title generation.
-- Use [references/citation-blocks.md](references/citation-blocks.md) for extractable blocks.
-- Use [references/markdown-output-rules.md](references/markdown-output-rules.md) for final publish-ready formatting checks.
+- Use [references/citation-blocks.md](references/citation-blocks.md) for extractable blocks, answer-first opening, source tags, and the timeliness line.
+- Use [references/markdown-output-rules.md](references/markdown-output-rules.md) for the publish-target decision table and final publish-ready formatting checks.
 - Use [references/ai-search-citation.md](references/ai-search-citation.md) for AI-search citation optimization: query-mirror intent words, citation hotspots, entity info blocks, source anchors, freshness, and verification.
-- Use [references/structured-data.md](references/structured-data.md) for JSON-LD schema output in GEO asset bundles.
+- Use [references/structured-data.md](references/structured-data.md) for JSON-LD schema output (Article, ItemList, FAQPage, Review, Organization, Product, HowTo, BreadcrumbList) in GEO asset bundles.
