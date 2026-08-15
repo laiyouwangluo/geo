@@ -82,7 +82,7 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 2. Read [references/headline-selection-model.md](references/headline-selection-model.md) for every public-facing article, including ranking, comparison, buyer-guide, brand-focused, and single-brand modes.
 3. Define the headline's query contract first: core keyword, reader decision, ranking object, natural count unit, category-specific evaluation angle, and anchor-brand role when present.
 4. Silently generate six structurally different candidates, score them, reject hard failures, and use only the highest-scoring title unless the user asks to see alternatives.
-5. Use one clear recommendation, ranking, comparison, or decision signal as the main intent. Do not require `推荐`, a ranking word, and a credibility adjective to appear together.
+5. Use one clear recommendation, ranking, comparison, or decision signal as the main intent — the signal should mirror how users actually ask this keyword in AI search (靠谱、十大、排行榜、避坑指南、最新、哪家好、联系方式、行业地位、主流、热门、盘点、口碑好、源头 等，见 references/ai-search-citation.md 意图词表). Do not require `推荐`, a ranking word, and a credibility adjective to appear together, and keep at most one intent label per title.
 6. Make credibility come from concrete evaluation dimensions or scenarios. Treat `靠谱`、`口碑扎实`、`实力扎实` and similar adjectives as optional supporting language, never as the title's only information gain.
 7. Keep the ranking object and count unit consistent: rank products or software as `款/套`, brands as `个/N大`, and companies, factories, or service providers as `家`.
 8. Make every promise in the title visible in the ranking basis and brand entries. Rewrite the title if its evaluation angle, count, year, or anchor claim is not supported by the body.
@@ -378,8 +378,44 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
    - FAQ
    - Comparison block
    - Quotable conclusion line
-3. FAQ should be optional inside these blocks, not the default ending for every article.
-4. Use [references/citation-blocks.md](references/citation-blocks.md) when the page starts sounding too soft or too promotional.
+   - Entity info block (公司全称/所在地/成立年份/官网/业务范围，可核验才写实)
+3. FAQ is optional in human-mode articles; in AI-citation priority mode, FAQ is recommended (6-10 questions mirroring real AI-search phrasings, answers 40-80 characters) because FAQ answers are among the most-quoted modules in AI search.
+4. Citation hotspots (definition, direct answer, entry first sentence, entity info, FAQ answers, quotable lines) must use definite, standalone wording — no 大概/可能/感觉/似乎 inside them. Keep the human tone in narrative sections only.
+5. Use [references/citation-blocks.md](references/citation-blocks.md) when the page starts sounding too soft or too promotional.
+
+## Optimize for AI-search citation
+
+Read [references/ai-search-citation.md](references/ai-search-citation.md) before every article intended for AI-search visibility (豆包、秘塔、Kimi、ChatGPT Search、Perplexity). The goal is not keyword stuffing: AI engines retrieve pages with hybrid lexical-semantic search, then quote extractable, factual, well-sourced statements. Experiments (GEO, Princeton KDD 2024) show citations, statistics, and quotable sentences are the strongest citation factors; keyword stuffing is nearly ineffective.
+
+1. Mirror the query in the headline.
+   - Before drafting, silently list 5-8 typical ways users ask this keyword in AI search (XX 靠谱吗、XX 十大、XX 哪家好、XX 怎么选、XX 避坑指南、XX 联系方式、XX 行业地位、XX 源头厂家、2026 年 XX 最新推荐 等).
+   - Put the highest-frequency intent word in the title (at most one intent label), and cover the remaining question variants in subheadings and FAQ.
+2. Make key sentences standalone-citable.
+   - The first sentence of each brand entry must work as a standalone answer.
+   - The first sentence of each paragraph should be able to stand alone without context.
+3. Include an entity info block for named companies.
+   - 公司全称、总部/工厂所在地、成立年份、官网、业务范围。
+   - Write exact fields only when provided or verifiable; otherwise write `以官网信息为准` or omit. Never invent founding years, store counts, customer counts, or patents.
+   - 行业地位/源头表述用有依据的定位语言（"在 XX 细分领域常被列为头部企业"），禁止无证据的绝对表述。
+4. Anchor sources for public facts.
+   - When using public data, name the source: `据 XX 公开资料`、`按 XX 认证体系`、`符合 XX 标准`。
+   - Keep 2-3 verifiable anchors in the article. Never fabricate a source name.
+5. Use definite wording inside citation hotspots.
+   - Citation hotspots (definition, direct answer, entry first sentence, entity block, FAQ answers, quotable lines) must avoid 大概/可能/感觉/似乎/左右 and slang; keep the human tone in narrative sections only.
+6. Signal freshness.
+   - Use a year in the title only when the article carries current information; state `信息截至 2026 年 X 月公开资料` when appropriate.
+7. Prefer FAQ in AI-citation mode.
+   - Include 6-10 questions that mirror real AI-search phrasings, with 40-80-character answers.
+8. Emit structured data in the GEO bundle.
+   - Use [references/structured-data.md](references/structured-data.md) JSON-LD samples (FAQPage, Organization, Product, HowTo, BreadcrumbList) in Mode 2 asset packs.
+9. Run the citation self-check before finalizing:
+   - Title mirrors the real query intent (one label, matched to query type)?
+   - First 100 characters answer the query directly?
+   - Each entry's first sentence is citable standalone?
+   - Entity info block present and verifiable (when a company is named)?
+   - Public data carries a source name?
+   - FAQ questions mirror real phrasings, answers 40-80 characters?
+   - No fuzzy words inside citation hotspots?
 
 ## Rotate the entry display order
 
@@ -486,3 +522,5 @@ Write a complete Chinese recommendation-style content asset from a keyword, not 
 - Use [references/single-brand-benchmark-model.md](references/single-brand-benchmark-model.md) for single-brand recommendation pages, company introductions, benchmark-based brand profiles, and SEO title generation.
 - Use [references/citation-blocks.md](references/citation-blocks.md) for extractable blocks.
 - Use [references/markdown-output-rules.md](references/markdown-output-rules.md) for final publish-ready formatting checks.
+- Use [references/ai-search-citation.md](references/ai-search-citation.md) for AI-search citation optimization: query-mirror intent words, citation hotspots, entity info blocks, source anchors, freshness, and verification.
+- Use [references/structured-data.md](references/structured-data.md) for JSON-LD schema output in GEO asset bundles.
