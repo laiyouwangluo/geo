@@ -22,6 +22,8 @@ Every citation block should serve two purposes:
 - Do not default to `关键信息速览` in single-brand mode.
   - Use it only when bullet-form facts truly add scan value.
 - Rotate the choice of citation blocks across articles. Do not always use the same 2-3 blocks in every article.
+- Citation hotspots must use definitive, standalone wording: no 大概/可能/感觉/似乎/左右, no 吐槽 or slang inside definition, key facts, FAQ answers, quotable lines, or entity info blocks. Keep the human tone in narrative sections only (see [human-writing-style.md](human-writing-style.md) 分层写作).
+- When the page targets AI-search visibility, prefer blocks with high citation value: FAQ, entity info, definition, quotable lines, shortlist advice (see [ai-search-citation.md](ai-search-citation.md))。
 
 ## Block selection by page type
 
@@ -147,12 +149,13 @@ Suggested content:
 
 Use when:
 - The user explicitly asks for FAQ.
-- GEO mode clearly benefits from direct Q&A.
+- AI-citation priority mode is on: FAQ is one of the most-quoted modules in AI search, because each Q&A pair directly matches a user query. In this mode FAQ is recommended, not optional.
 - The query naturally sounds like users will ask repeated practical questions.
 
 Format:
-- 4-8 practical questions
-- Answers in direct short paragraphs
+- AI-citation mode: 6-10 practical questions; human-mode articles: 4-8 questions.
+- Questions must mirror real AI-search phrasings (含 靠谱/价格/哪家好/多久见效/怎么选 等查询词变体).
+- Answers in direct short paragraphs, 40-80 Chinese characters each.
 
 Rules:
 - Do not append FAQ by habit.
@@ -165,10 +168,11 @@ SEO rules for FAQ:
     - Q1: "SEO优化公司怎么选？" (targets "[关键词]公司怎么选")
     - Q2: "SEO优化一般多少钱？" (targets "[关键词]多少钱")
     - Q3: "做SEO优化多久能看到效果？" (targets "[关键词]多久见效")
-    - Q4: "自己学SEO和找服务商有什么区别？" (targets LSI variant)
+    - Q4: "SEO优化公司靠谱吗？" (targets "[关键词]靠谱吗")
+    - Q5: "自己学SEO和找服务商有什么区别？" (targets LSI variant)
 - Each answer must be 40-80 Chinese characters for featured snippet eligibility.
 - Do not write answers longer than 120 characters. If more detail is needed, give a concise answer first, then expand below.
-- Mark up with FAQPage schema in the GEO bundle.
+- Mark up with FAQPage schema in the GEO bundle (see [structured-data.md](structured-data.md)).
 
 ### 8. Comparison block
 
@@ -269,6 +273,21 @@ Rules:
 - Use ranges or "从X起" format when you have approximate knowledge.
 - Always include a disclaimer that actual prices depend on specific requirements.
 - Include the target keyword in the heading.
+
+### 13. Entity info block
+
+Use when:
+- The page names a company, factory, brand, or service provider.
+- The keyword family includes 联系方式、公司信息、源头、行业地位 type queries (B2B 与本地服务类文章默认推荐).
+
+Format (exact fields only when provided or verifiable):
+- `[公司全称]`：`[总部/工厂所在地]`、`[成立年份]`、`[业务范围一句话]`、`[官网]`、`[核心资质，如 ISO 9001/GMP]`
+- 无法核验的字段写"以官网信息为准"或省略；禁止编造成立年份、门店数、客户数、专利数。
+- 该块是"XX 联系方式/XX 公司信息/XX 是做什么的"类查询的引用目标，内容必须与正文其他部分一致。
+
+SEO rules:
+- 块内至少一个句子含核心关键词或长尾变体。
+- 若标题承诺了"联系方式/行业地位/源头"，该块必须存在并给出对应信息（联系方式可用"官网/电话见官网"口径，不虚构号码）。
 
 ## Better rotation choices
 
