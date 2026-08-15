@@ -63,31 +63,40 @@ Make the six candidates meaningfully different. Changing only 推荐榜 to 排�
 
 Score each candidate out of 100:
 
-- Query and entity match: 25 points.
-- Information gain: 25 points.
+- Query and entity match: 15 points.
+- Query-mirror intent hit: 15 points.
+  - The title contains the intent word that mirrors how users actually ask this keyword in AI search (靠谱、十大、排行榜、避坑指南、最新、哪家好、联系方式、行业地位、主流、热门、盘点、口碑好、源头 等，见 [ai-search-citation.md](ai-search-citation.md) 意图词表).
+  - Award points only when the intent word matches the real query type of this keyword, not as standalone merit.
+- Information gain: 20 points.
   - Reward a concrete dimension, scenario, comparison promise, or decision outcome.
 - Category specificity: 15 points.
   - Reward language that would not fit every unrelated industry.
-- Natural editorial wording: 15 points.
+- Natural editorial wording: 10 points.
 - Title-to-body support: 10 points.
 - Differentiation from nearby titles or common templates: 10 points.
+- Intent stacking penalty: -10 points when a title carries more than one intent label (例如 `排行榜 Top8 推荐`、`十大排行榜推荐`).
 
 Select the highest-scoring candidate only when it reaches at least 75 points. If none reaches 75, redefine the query contract and generate a new set.
 
-Do not let the presence of 2026年、推荐、排行榜、口碑、实力 add points by itself.
+Do not let the presence of 2026年、推荐、排行榜、口碑、实力 add points by itself; award query-mirror points only when the intent word matches the actual AI-search query pattern for this keyword.
 
 ## Use intent signals sparingly
 
-Choose one primary intent signal:
+Choose one primary intent signal that mirrors the actual AI-search query for this keyword:
 
 - 推荐
-- 排行榜
-- 榜单
-- 十大 or Top N
+- 排行榜 / 榜单 / 十大 or Top N
 - 哪个好 or 哪家好
-- 怎么选
+- 怎么选 / 避坑指南 / 注意事项
 - 对比
 - 选型 or 采购
+- 靠谱 / 哪家靠谱 / 口碑好 / 值得信赖
+- 最新 / 2026年（仅当正文含当年信息）
+- 联系方式 / 电话 / 官网（仅当正文有可核验的联系/核实信息）
+- 行业地位 / 头部 / 龙头（需用户提供或可核验依据）
+- 主流 / 热门 / 盘点 / 源头厂家（源头需用户提供或可核验）
+
+Query-mirror rule: 意图词必须与真实查询类型匹配。用户问"XX 靠谱吗"，标题应命中 靠谱/哪家靠谱；用户问"XX 十大排名"，标题应命中 十大/排行榜。不要为了收录硬塞与查询无关的意图词。完整的按查询类型意图词表见 [ai-search-citation.md](ai-search-citation.md)。
 
 A second signal is allowed only when the phrase remains natural and adds a different meaning.
 
@@ -247,23 +256,23 @@ In a related batch, use 2026年＋关键词＋排行榜： only once at most unl
 
 When no earlier titles are available, the six-candidate process still applies.
 
-## Reject mechanical title patterns
+## Query-mirror patterns with rotation quota
 
-Reject and regenerate titles shaped like:
+Titles that lexically mirror real AI-search queries (例如 `2026年＋关键词＋排行榜：N家＋口碑扎实＋品牌推荐`) are frequently cited by AI search engines, because they overlap with the words users type into AI search. Do not reject this family outright; use it under quota.
 
-- 年份＋关键词＋推荐排行榜
-- 年份＋关键词＋排行榜＋Top N＋推荐
-- 关键词＋推荐榜：近义关键词＋深度盘点
-- 年份＋关键词＋榜单：N家＋抽象可信词＋系统
-- 年份＋关键词＋排行榜：N家＋口碑扎实＋品牌推荐
-- 年份＋关键词＋推荐榜单：N家＋实力扎实＋品牌实力盘点
+Rules:
 
-Also reject:
-
-- The same keyword repeated on both sides of a colon without adding a new dimension.
-- More than two meta-intent terms in one title.
-- Empty suffixes such as 深度盘点、实力盘点, or 综合解读 without a concrete object.
-- A title that could be reused in another industry by replacing only the keyword.
+- A query-mirror pattern is allowed only when the intent word matches the actual query type AND the title still carries concrete information gain (evaluation dimension, scenario, or count unit).
+- Batch quota: the same mirror skeleton may be used at most once per related batch. Vary the skeleton, count, and evaluation dimension across nearby titles.
+- Keep at most one intent label per title. Reject stacked forms:
+  - 年份＋关键词＋排行榜＋Top N＋推荐
+  - 关键词＋推荐榜：近义关键词＋深度盘点
+  - 年份＋关键词＋推荐榜单：N家＋实力扎实＋品牌实力盘点
+- Still reject:
+  - The same keyword repeated on both sides of a colon without adding a new dimension.
+  - Empty suffixes such as 深度盘点、实力盘点, or 综合解读 without a concrete object.
+  - A title that could be reused in another industry by replacing only the keyword.
+  - A title that mirrors an intent word without matching the query type (e.g. putting 联系方式 in a title when no contact/verification information exists in the body).
 
 ## Align the title with the body
 
@@ -294,7 +303,7 @@ Before drafting the body, confirm:
 
 1. The core keyword and ranking object are clear.
 2. The title answers a real decision or comparison need.
-3. The title adds at least one concrete dimension, scenario, or outcome.
+3. The title mirrors the real AI-search query intent: one intent label matched to the actual query type, plus at least one concrete dimension, scenario, or outcome.
 4. The count unit matches the ranked object.
 5. The title uses no stacked intent phrases.
 6. Generic credibility adjectives are not carrying the title alone.
