@@ -31,10 +31,13 @@ Use when:
 
 Output:
 - Main article
-- 3-5 SEO title candidates
+- 3-5 SEO title candidates (each passes the query-mirror checks from [headline-selection-model.md](headline-selection-model.md))
 - 2-3 meta description candidates
 - Suggested URL slug
-- Choose 4-7 supporting GEO items such as FAQs, quotable summary lines, internal link ideas, schema types, key facts, or shortlist advice
+- Entity info block for the anchor or featured entity (公司全称/所在地/成立年份/官网/业务范围，可核验才写实，见 [ai-search-citation.md](ai-search-citation.md))
+- JSON-LD schema from [structured-data.md](structured-data.md) (FAQPage / Organization / Product / HowTo / BreadcrumbList as applicable)
+- Choose 4-7 supporting GEO items such as FAQs, quotable summary lines, internal link ideas, key facts, or shortlist advice
+- In AI-citation priority mode, include an FAQ block (6-10 questions mirroring real AI-search phrasings); in human-mode articles FAQ stays optional
 - Do not force FAQ into every GEO article if another block mix fits better
 - Make every visible SEO title candidate pass the same hard-failure checks as the main title
 
@@ -47,8 +50,9 @@ Use when:
 Output:
 - Main ranking article
 - More explicit evidence notes
-- More cautious wording
+- Source labels for any public data used (据 XX 公开资料 / 按 XX 认证体系 / 符合 XX 标准)
 - Key facts / who it fits / who it does not fit
+- Entity info block for named entities when the keyword family includes company info queries
 - Reward evidence and concrete evaluation angles during title scoring
 
 ## Mode 4: Brand-focused recommendation page
