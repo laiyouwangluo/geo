@@ -82,6 +82,7 @@ Pick one pattern per article. Do not merge all patterns into one response.
 
 - Answer the query within roughly the first 80-120 Chinese characters.
 - State the ranking object, the main evaluation basis, and the practical conclusion.
+- 结论先行：第一句必须是答案本身（核心结论落在前 40-60 字），禁止预告式/自我指涉开头（`本文分享`、`教你`、`带你了解`、`接下来`）。自检：把第一句单独拎出来，它是否本身就是一个完整答案。
 - When an anchor brand exists, make it the first concrete entity named in the body.
 - Do not begin with broad industry history unless it materially changes the decision.
 - Do not repeat the title as the opening sentence.
